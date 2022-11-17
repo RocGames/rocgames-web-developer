@@ -4,32 +4,33 @@
 
 * [概览](README.md)
 * [准备工作](started/get-ready.md)
-* [快速开始](started/quickstart.md)
+* 快速开始
     * [Android SDK](started/quickstart-and.md)
     * [IOS SDK](started/quickstart-ios.md)
-* [上线流程](started/publish.md)
-    * [测试用户](started/test-accounts.md)
+* 上线流程
+    * [运维验收](started/publish.md)
+    * [测试验收](started/test.md)
 * [隐私政策](started/agreement.md)
 
 ### 核心模块
 
 * 登录
     * [功能介绍](core/login/overview.md)
-    * [功能接入](core/login/access.md)
+    * 功能接入
     	* [Android](core/login/access-and.md)
     	* [IOS](core/login/access-ios.md)
     * [简单登录](core/login/simple-login.md)
     * [最佳实践](core/login/best-practice.md)
 * 支付
     * [功能介绍](core/pay/overview.md)
-    * [功能接入](core/pay/access.md)
+    * 功能接入
         * [Android](core/pay/access-and.md)
         * [IOS](core/pay/access-ios.md)
     * [简单支付](core/pay/simple-pay.md)
     * [最佳实践](core/pay/best-practice.md)
 * 公告
     * [功能介绍](core/notice/overview.md)
-    * [功能接入](core/notice/access.md)
+    * 功能接入
         * [Android](core/notice/access-and.md)
         * [IOS](core/notice/access-ios.md)
     * [简单支付](core/notice/simple-notice.md)
@@ -37,11 +38,13 @@
 
 ### 扩展模块
 
-* [礼包系统](modules/gift/overview.md)
-    * [功能接入](modules/gift/access.md)
+* 礼包系统
+    * [功能介绍](modules/gift/overview.md)
+    * 功能接入
     * [最佳实践](modules/gift/best-practice.md)
-* [数据分析](modules/analytics/overview.md)
-    * [功能接入](modules/analytics/access.md)
+* 数据分析
+    * [功能介绍](modules/analytics/overview.md)
+    * 功能接入
     * [最佳实践](modules/analytics/best-practice.md)
 * [游戏好友](modules/other/1.md)
 * [成就系统](modules/other/2.md)

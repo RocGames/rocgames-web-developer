@@ -3,6 +3,7 @@
     MyExternalInterface.getInstance().isStartLog(true);//TAG: mySDK
 
 <font color=red size=2>在启动activity里oncreate加上,可以开启日志调试，正式上线包需要改成false</font>
+
 ## 1.在自己的Application onCreate里调用 ##
 
     MyExternalInterface.getInstance().APPInit(Application application,boolean isProduction);

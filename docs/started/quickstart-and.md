@@ -1,9 +1,33 @@
-# 使用Android Stidio集成 #
-## 1.  集成 SDK配置 ##
+> [!NOTE|style:flat|labelVisibility:hidden|iconVisibility:hidden]
+> 
+> **本文介绍如何快速接入 Android SDK 并实现 登录 功能。**
+>
 
-> 特别注意：aab包体需要控制在150M之内，也可以参考官方文档https://developer.android.com/guide/app-bundle/asset-delivery?authuser=1
+<div style="display:none">
+页面提供了 Android 示例项目，可供参考。
+</div>
 
-### 1. 获取必要参数 ###
+
+# (一)创建应用
+---
+请登录 **开发者中心** 注册为开发者并创建应用。
+
+# (二)环境要求
+---
+- Unity 2019.4 或更高版本
+- Android 5.0（API level 21）或更高版本
+
+# (三)项目配置
+---
+
+> [!DANGER|label:特别注意]
+>
+> **aab包体需要控制在150M之内**
+> 
+> 参考官方文档https://developer.android.com/guide/app-bundle/asset-delivery?authuser=1
+>
+
+## 1. 获取必要参数 ###
 
 参数 |	说明
   --|:--:
@@ -11,8 +35,8 @@ gameId	|游戏ID
 appkey	|游戏加密密钥
 channelId	|渠道 ID，目前固定为“GP”
 
-### 2. 引入Android studio 依赖 ###
-##### 1）在工程的根目录gradle中加入maven仓库的引用地址 #####
+## 2. 引入Android studio 依赖 ###
+### 1）在工程的根目录gradle中加入maven仓库的引用地址 #####
 
  <img src="../images/Android_1.png" width = "500" height = "400" alt="Android_1" align=center />
 
@@ -48,7 +72,7 @@ repositories {
 
 ```
 
-##### 2）在工程的app gradle  dependencies中加入aar引用并加上google配置 #####
+### 2）在工程的app gradle  dependencies中加入aar引用并加上google配置 #####
 
 在最顶部加入   
  <img src="../images/Android_2.png" width = "420" height = "190" alt="Android_2" align=center />
@@ -68,14 +92,14 @@ implementation 'com.myLegend.secondsdk:mySecondSdkaar:2.4.8'
 
 ```
 
-##### 3）必须拷贝assets里的配置文件 #####
+### 3）必须拷贝assets里的配置文件 #####
 
 sdk_config文件中配置正式域名和测试域名，
 adjust_config.xml 文件中配置adjust事件token
 
  <img src="../images/Android_4.png" width = "400" height = "150" alt="Android_4" align=center />
 
-##### 4）开启Androidx插件 #####
+### 4）开启Androidx插件 #####
 
 在gradle.properties中添加下面的代码 
 
@@ -110,9 +134,9 @@ configurations {
 
 ```
 
-### 3. 配置AndroidManifest.xml ###
+## 3. 配置AndroidManifest.xml ###
 
-##### 1）在工程 AndroidManifest.xml 加入以下权限 #####
+### 1）在工程 AndroidManifest.xml 加入以下权限 #####
 
 ```xml
 
@@ -126,7 +150,7 @@ configurations {
 
 ```
 
-##### 2）AndroidManifest.xml 配置 #####
+### 2）AndroidManifest.xml 配置 #####
 
 ```xml
 //<!--name配置自己的Application路径-->
