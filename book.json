@@ -38,7 +38,7 @@
             "theme": "dark"
         },
         "edit-link": {
-            "base": "https://github.com/RocGames/developer-docs-portal/edit/main",
+            "base": "https://github.com/RocGames/developer-docs-portal/edit/main/docs",
             "label": "编辑本页"
         },
         "page-footer-ex":{
