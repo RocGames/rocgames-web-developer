@@ -1,9 +1,28 @@
-## 接入前事项 ##
-- iOS版本要求  iOS11.0+
-- 使用cocoapods集成管理三方库，以防止两边有共用三方库引起冲突
+> [!NOTE|style:flat|labelVisibility:hidden|iconVisibility:hidden]
+> 
+> **本文介绍如何快速接入 IOS SDK 并实现 登录 功能。**
+>
 
-## 1. 将SDK集成到Xcode工程中
+<div style="display:none">
+页面提供了 iOS示例项目，可供参考。
+</div>
+
+# (一)环境要求
+---
+
+- iOS 11.0 或更高版本
+
+# (二)项目配置
+---
+
+> [!DANGER|label:特别注意]
+>
+> **请使用cocoapods集成管理三方库，以防止两边有共用三方库引起冲突**
+>
+
+## 一、将SDK集成到Xcode工程中
 ### 1.0 把iOSSDK文件夹下的 framework + source.bundle 添加到工程中
+
 ![](../images/iOSSDK_1.0.0.png)
 
 ### 1.1 工程添加google配置文件和Plist文件同级目录下
@@ -42,42 +61,42 @@
 
 ## 3. info.plist文件配置
 ###  3.1 添加如下code
-```OC
+```xml
 <key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>⚠️#可查看参数表#⚠️</string>
-			</array>
-		</dict>
-	</array>
-    <key>FacebookAppID</key>
-    <string>⚠️#可查看参数表#⚠️</string>
-	<key>FacebookClientToken</key>
-	<string>⚠️#可查看参数表#⚠️</string>
-    <key>FacebookDisplayName</key>
-    <string>⚠️#可查看参数表#⚠️</string>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>fbapi</string>
-        <string>fbapi20130214</string>
-        <string>fbapi20130410</string>
-        <string>fbapi20130702</string>
-        <string>fbapi20131010</string>
-        <string>fbapi20131219</string>
-        <string>fbapi20140410</string>
-        <string>fbapi20140116</string>
-        <string>fbapi20150313</string>
-        <string>fbapi20150629</string>
-        <string>fbapi20160328</string>
-        <string>fbauth</string>
-        <string>fb-messenger-share-api</string>
-        <string>fbauth2</string>
-        <string>fbshareextension</string>
-    </array>
+<array>
+	<dict>
+		<key>CFBundleTypeRole</key>
+		<string>Editor</string>
+		<key>CFBundleURLSchemes</key>
+		<array>
+			<string>⚠️#可查看参数表#⚠️</string>
+		</array>
+	</dict>
+</array>
+<key>FacebookAppID</key>
+<string>⚠️#可查看参数表#⚠️</string>
+<key>FacebookClientToken</key>
+<string>⚠️#可查看参数表#⚠️</string>
+<key>FacebookDisplayName</key>
+<string>⚠️#可查看参数表#⚠️</string>
+<key>LSApplicationQueriesSchemes</key>
+<array>
+     <string>fbapi</string>
+     <string>fbapi20130214</string>
+     <string>fbapi20130410</string>
+     <string>fbapi20130702</string>
+     <string>fbapi20131010</string>
+     <string>fbapi20131219</string>
+     <string>fbapi20140410</string>
+     <string>fbapi20140116</string>
+     <string>fbapi20150313</string>
+     <string>fbapi20150629</string>
+     <string>fbapi20160328</string>
+     <string>fbauth</string>
+     <string>fb-messenger-share-api</string>
+     <string>fbauth2</string>
+     <string>fbshareextension</string>
+ </array>
 ```
 ### 3.2 添加如下标签
 ![](../images/iOSSDK_3.2.png)
@@ -92,7 +111,7 @@
 ￼![](../images/iOSSDK_3.5.png)
 
 ## 4. 使用cocoaPods集成其它三方库到工程中
-```podfile
+```c
 source 'https://github.com/CocoaPods/Specs.git'
 
 platform:ios, ’11.0’

@@ -1,6 +1,6 @@
 # 文档中心
 
-![Build Status](https://github.com/RocGames/developer-docs-portal/actions/workflows/gitbook-action.yml/badge.svg)
+![Build Status](https://github.com/RocGames/developer-docs-portal/actions/workflows/gitbook-build-actions.yml/badge.svg)
 
 ## Changelog
 
