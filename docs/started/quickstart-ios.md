@@ -4,20 +4,15 @@
 >
 
 <div style="display:none">
-页面提供了 Android 示例项目，可供参考。
+页面提供了 iOS示例项目，可供参考。
 </div>
 
-
-# (一)创建应用
+# (一)环境要求
 ---
-请登录 **开发者中心** 注册为开发者并创建应用。
 
-# (二)环境要求
----
-- Unity 2019.4 或更高版本
 - iOS 11.0 或更高版本
 
-# (三)项目配置
+# (二)项目配置
 ---
 
 > [!DANGER|label:特别注意]
@@ -27,6 +22,7 @@
 
 ## 一、将SDK集成到Xcode工程中
 ### 1.0 把iOSSDK文件夹下的 framework + source.bundle 添加到工程中
+
 ![](../images/iOSSDK_1.0.0.png)
 
 ### 1.1 工程添加google配置文件和Plist文件同级目录下
