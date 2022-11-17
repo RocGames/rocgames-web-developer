@@ -1,0 +1,10 @@
+
+/*使<h1> <h2>标签有下边框*/
+h1 , h2{
+    border-bottom: 1px solid #EFEAEA;
+}
+
+/*默认的 checkbox 会向右偏移 2em*/
+input[type=checkbox]{
+    margin-left: -2em;
+}
