@@ -14,6 +14,7 @@
         "-search",
         "-sharing",
 
+        "ga",
         "code",
         "chapter-fold",
         "expandable-chapters",
@@ -34,11 +35,14 @@
     "pluginsConfig": {
         "chapter-fold":{},
         "expandable-chapters": {},
+        "ga": {
+            "token": "UA-44087823-2"
+        },
         "theme-api": {
             "theme": "dark"
         },
         "edit-link": {
-            "base": "https://github.com/RocGames/developer-docs-portal/edit/main",
+            "base": "https://github.com/RocGames/developer-docs-portal/edit/main/docs",
             "label": "编辑本页"
         },
         "page-footer-ex":{
