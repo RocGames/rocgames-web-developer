@@ -318,3 +318,101 @@ Android 13 引入了用于显示通知的新运行时权限。这会影响在 An
             android:name="Google_SingIn_Key"
             android:value="@string/google_singin_key"></meta-data>
 和Facebook配置一样，具体值写在string.xml里
+
+## 8.关于混淆 ##
+如果开启了混淆 minifyEnabled 是true，则需要在proguard-rules加入以下代码
+
+    #---------------------------------MySDK---------------------------------
+	-keepclassmembers class com.myBest.sdk.utils.JsInterationUtils {
+    	<methods>;
+	}
+
+	-dontwarn com.facebook.**
+	-keep class com.facebook.** { *; }
+
+	-dontwarn com.google.**
+	-keep class com.google.** { *; }
+
+	#okhttp3.x
+	-dontwarn okhttp3.**
+	-keep class okhttp3.** { *;}
+	-dontwarn okio.**
+	#retrofit
+	-dontwarn retrofit.**
+	-keep class retrofit.** { *; }
+	-keepattributes Signature
+	-keepattributes Exceptions
+	-dontwarn okio.**
+	#retrofit2.x
+	-dontwarn retrofit2.**
+	-keep class retrofit2.** { *; }
+	-keepattributes Signature
+	-keepattributes Exceptions
+	#--------------------------Adjust-------------------------------
+	-keep public class com.adjust.sdk.** { *; }
+	-keep class com.google.android.gms.common.ConnectionResult {
+    	int SUCCESS;
+	}
+	-keep class com.google.android.gms.ads.identifier.AdvertisingIdClient {
+    	com.google.android.gms.ads.identifier.AdvertisingIdClient$Info getAdvertisingIdInfo(android.content.Context);
+	}
+	-keep class com.google.android.gms.ads.identifier.AdvertisingIdClient$Info {
+    	java.lang.String getId();
+    	boolean isLimitAdTrackingEnabled();
+	}
+	-keep class dalvik.system.VMRuntime {
+    	java.lang.String getRuntime();
+	}
+	-keep class android.os.Build {
+    	java.lang.String[] SUPPORTED_ABIS;
+    	java.lang.String CPU_ABI;
+	}
+	-keep class android.content.res.Configuration {
+    	android.os.LocaleList getLocales();
+    	java.util.Locale locale;
+	}
+	-keep class android.os.LocaledList {
+    	java.util.Locale get(int);
+	}
+	-keep public class com.android.installreferrer.** { *; }
+	#--------------------------Adjust-------------------------------
+
+	################### region for xUtils
+	-keepattributes Signature,*Annotation*
+	-keep public class org.xutils.** {
+    	public protected *;
+	}
+	-keep public interface org.xutils.** {
+   	 public protected *;
+	}
+	-keepclassmembers class * extends org.xutils.** {
+   	 public protected *;
+	}
+	-keepclassmembers @org.xutils.db.annotation.* class * {*;}
+	-keepclassmembers @org.xutils.http.annotation.* class * {*;}
+	-keepclassmembers class * {
+   		 @org.xutils.view.annotation.Event <methods>;
+	}
+	#################### end region
+	##---------------Gson  ----------
+	# Gson uses generic type information stored in a class file when working with fields. Proguard
+	# removes such information by default, so configure it to keep all of it.
+	-keepattributes Signature
+
+	# For using GSON @Expose annotation
+	-keepattributes *Annotation*
+
+	# Gson specific classes
+	-keep class sun.misc.Unsafe { *; }
+	#-keep class com.google.gson.stream.** { *; }
+	##---------------Gson  ----------
+	# Application classes that will be serialized/deserialized over Gson
+	#---------------------------------实体类---------------------------------
+	-keep class com.myBest.sdk.Javabean.** { *; }
+
+	-keep class com.myBest.sdk.Interfaces.** { *; }
+	-keep class com.myBest.sdk.listener.** { *; }
+	-keep class com.android.vending.billing.** { *; }
+	-keep class com.myBest.sdk.helpers.MyInputMapProvider{ *; }
+
+	#---------------------------------MySDK---------------------------------
