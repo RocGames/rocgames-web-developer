@@ -6,7 +6,8 @@
     "gitbook": "3.2.3",
     "root": "./docs",
     "structure": {
-        "readme": "README.md"
+        "readme": "docs/README.md",
+        "summary": "docs/SUMMARY.md",
     },
     "plugins": [
         "-lunr",
