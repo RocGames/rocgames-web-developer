@@ -1,14 +1,19 @@
+> [!TIP|iconVisibility:hidden|labelVisibility:hidden]
+> 
+> **SDK 接入请参照 [快速开始](/started/quickstart-ios.md) 或 [IOS登录](/core/login/access-ios.md) 页面**
+
 # iOS 支付
 - apple内购支付
 
 ---
 
 ## 1. 支付拉起
-> * *请先初始化 SDK 可参考 **access-ios***
-> * *SDK已做订单单比化(一单结束才能进行下一单)，无需再做遮罩层。*
-> * *已做客户端自动补单功能，掉单后且没有提示发货相关的错误提示时(如:发货失败、重复的订单等)，可重启应用进行自动补单。*
-> 
+> * 请先初始化 SDK 可参考 [IOS登录](/core/login/access-ios.md) 
+> * SDK已做订单单比化(一单结束才能进行下一单)，无需再做遮罩层。
+> * 已做客户端自动补单功能，掉单后且没有提示发货相关的错误提示时(如:发货失败、重复的订单等)，可重启应用进行自动补单。
+
 ### 接口对象包含字段说明:
+
 | 参数   | 类型 |     说明 |
 | :-- | :---: | :-- |
 | productId | 字符串 | 传苹果内购ID |
@@ -20,6 +25,7 @@
 | extension | 字符串 | 透传参数，会原样返回给你们（没有就传字符串@""） |
 
 ### 调用示例如下:
+
 ```objectivec
 [ROCSdkManager pay:@{@"productId":@"com.game.brast.iap.tier4",
                      @"serverid":@"1299999",
