@@ -172,8 +172,9 @@ Android 11,需要在 AndroidMainfest.xml 加上下面内容，不然可能会分
     	</queries>
     ...
 	</manifest>
-<img src="../images/Android_8.png" width = "550" height = "80" alt="Android_8" 
-align=center />
+
+ <img src="/images/Android_8.png" width = "550" height = "80" alt="Android_8" 
+ align=center />
 
 ####1.Facebook分享链接####
     接口定义：
@@ -289,7 +290,7 @@ shareId|String|	分享点所在位置id（具体值具体定义）
 
 ## 6.Firebase推送 ##
 ####1.在Firebase创建的应用下载json文件####
- <img src="../images/Android_9.png" width = "550" height = "400" alt="Android_9" align=center />
+ <img src="/images/Android_9.png" width = "550" height = "400" alt="Android_9" align=center />
 在AndroidManifest.xml 的application节点下加入
 
     <service
@@ -312,7 +313,7 @@ Android 13 引入了用于显示通知的新运行时权限。这会影响在 An
 
 ## 7.配置Google登录 ##
 拷贝credentials.json文件放在同样的目录位置
-<img src="../images/Android_10.png" width = "390" height = "290" alt="Android_10" align=center />
+<img src="/images/Android_10.png" width = "390" height = "290" alt="Android_10" align=center />
 
     	<!--google 登录配置-->
         <meta-data
