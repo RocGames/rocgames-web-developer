@@ -12,6 +12,7 @@ SDK支持多种登录方式
 > 在  - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(nullable NSDictionary<UIApplicationLaunchOptionsKey, id> *)launchOptions 方法中调用
 
 接口参数说明:
+
 | 参数   | 类型 |     说明 |
 | :--: | :---: | :-- |
 | isProduction | bool | 线上为 YES , 测试为NO, ⚠️提审时需设置为YES |
