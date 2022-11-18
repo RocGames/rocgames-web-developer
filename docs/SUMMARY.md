@@ -36,6 +36,17 @@
         * [IOS](core/notice/access-ios.md)
     * [简单支付](core/notice/simple-notice.md)
     * [最佳实践](core/notice/best-practice.md)
+* 数据上报
+    * [功能介绍](core/daq/overview.md)
+    * 功能接入
+        * [API](core/daq/access-api.md)
+        * [日志文件](core/daq/access-log.md)
+        * 埋点上报
+            * [Android](core/daq/access-event-and.md)
+            * [IOS](core/daq/access-event-ios.md)
+        * [数据库传输](core/daq/access-rds.md)
+    * [简单支付](core/daq/simple-daq.md)
+    * [最佳实践](core/daq/best-practice.md)
 
 ### 扩展模块
 
