@@ -29,6 +29,9 @@
         * [IOS](core/pay/access-ios.md)
     * [简单支付](core/pay/simple-pay.md)
     * [最佳实践](core/pay/best-practice.md)
+* 分享
+    * [功能接入]
+        * [iOS](core/share/access-ios.md)
 * 公告
     * [功能介绍](core/notice/overview.md)
     * 功能接入
@@ -44,6 +47,7 @@
         * 埋点上报
             * [Android](core/daq/access-event-and.md)
             * [IOS](core/daq/access-event-ios.md)
+            * [埋点文档](core/daq/access-events-table.md)
         * [数据库传输](core/daq/access-rds.md)
     * [简单支付](core/daq/simple-daq.md)
     * [最佳实践](core/daq/best-practice.md)

@@ -2,7 +2,7 @@
 > [!TIP|iconVisibility:hidden|labelVisibility:hidden]
 > 
 > **SDK 接入请参照 [快速开始](/started/quickstart-ios.md) 或 [IOS登录](/core/login/access-ios.md) 页面**
-> **具体埋点 请查看 [埋点文档](/core/daq/events-table.md) **
+> **具体埋点 请查看 [埋点文档](/core/daq/access-events-table.md) **
 
 # 接口定义
 
