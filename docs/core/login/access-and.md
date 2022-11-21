@@ -28,11 +28,11 @@ appkey|	String|	游戏加密密钥
 channelId|String|渠道 ID，目前固定为“GP”
 initListener|SDKInterfaceInitListener|	初始化回调接口
 ####2. 调用示例代码####
+```java
     MyExternalInterface.getInstance().SDKInit(MainActivity.this, GAMEID, SIGN_KEY, CHANNELID, new SDKInterfaceInitListener() {
             @Override
             public void initSuccess(String result) {
                 Log.d(TAG, "SDKInitsuccese-result====" + result);
-
                 if(result.equals("true")){
                     //同意了协议直接登录
                     login();
@@ -56,7 +56,7 @@ initListener|SDKInterfaceInitListener|	初始化回调接口
                 Log.d(TAG, "SDKInitfail-result====" + result);
             }
         });
-
+```
 ## 3. 登录 ##
     接口定义：
 		public void SDKLogin(Activity activity,SDKLoginListener listener)
@@ -86,6 +86,7 @@ fbBind|	String|	0表示没有绑定，1表示绑定了
 twitterBind|	String|	0表示没有绑定，1表示绑定了
 
 ####3. 调用示例代码####
+```java
      MyExternalInterface.getInstance().SDKLogin(MainActivity.this, new SDKLoginListener() {
             @Override
             public void onSuccess(int code, SdkLogincallBack sdkLogincallBack) {
@@ -109,21 +110,21 @@ twitterBind|	String|	0表示没有绑定，1表示绑定了
                 Log.d(TAG, "code==" + code + "\nmsg==" + msg);
             }
         });
+```
 ####4. 实现onActivityResult 方法####
+```java
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
  		MyExternalInterface.getInstance().onActivityResult(MainActivity.this, requestCode, resultCode, data, new BaseListener() {
             @Override
-            public void onSuccess(int code, String msg) {
-               
+            public void onSuccess(int code, String msg) {     
             }
             @Override
-            public void onFail(int code, String msg) {
-              
+            public void onFail(int code, String msg) {      
             }
         });
     }
-
+```
 ## 3.账号管理界面 ##
     接口定义：
 	public void SDKAccountManage(Activity activity, SDKInterfaceExitListener exitListener)
@@ -134,6 +135,7 @@ activity|Activity|上下文实例
 listener|SDKInterfaceExitListener|切换账号的回调
 
 ####2. 调用示例代码####
+```java
     MyExternalInterface.getInstance().SDKAccountManage(this, new SDKInterfaceExitListener() {
             @Override
             public void exitSuccess(String result) {
@@ -145,7 +147,7 @@ listener|SDKInterfaceExitListener|切换账号的回调
             public void exitFail(String result) {
             }
         });
-
+```
 
 ## 4.生命周期方法 ##
 ####1. 调用示例代码####
@@ -206,6 +208,7 @@ shareId|String|	分享点所在位置id（具体值具体定义）
 	msg ="3";为用户没有安装Facebook app，回调shareFail
 
 #####c.调用示例代码#####
+```java
     ShareInfo shareInfo = new ShareInfo();
         shareInfo.andLink = "https://www.baidu.com";
         shareInfo.dsp = "测试分享";
@@ -224,7 +227,7 @@ shareId|String|	分享点所在位置id（具体值具体定义）
                 Log.d(TAG, "s==" + s);
             }
         });
-
+```
 ####2.Facebook分享本地视频####
     接口定义：
 	public void SDKFacebookShareVideo (Activity activity, ShareInfo shareInfo,File videoFile, SDKInterfaceShareListener callback)
@@ -233,7 +236,7 @@ shareId|String|	分享点所在位置id（具体值具体定义）
 	UpdateInfo同上说明
 
 #####a.调用示例代码#####
-
+```java
 	File dir = this.getExternalFilesDir("video");
  	File loadingvideo = new File(dir, "shareVideo.mp4");
 
@@ -254,7 +257,7 @@ shareId|String|	分享点所在位置id（具体值具体定义）
                 Log.d(TAG, "s==" + s);
             }
 	});
-
+```
 ####3.Facebook分享图片####
     用户必须安装 7.0 或更高版本的原生 Android 版 Facebook 应用才能分享。
 	接口定义：
@@ -264,30 +267,27 @@ shareId|String|	分享点所在位置id（具体值具体定义）
 	UpdateInfo同上说明
 
 #####a.调用示例代码#####
-
+```java
 	File dir = this.getExternalFilesDir("picture");
             File sharePicture = new File(dir, "sharePicture.png");
             Uri uri = Uri.fromFile(sharePicture);
             Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), uri);
-
     ShareInfo shareInfo = new ShareInfo();
         shareInfo.uid = "10000";
         shareInfo.serverId = "1";
         shareInfo.roleId = "123";
         shareInfo.shareId = "maipage";
-
         MyExternalInterface.getInstance().SDKFacebookSharePicture (this,shareInfo, bitmap,new SDKInterfaceShareListener(){
 			@Override
             public void shareSuccess(String s) {
                 Log.d(TAG, "s==" + s);
             }
-
             @Override
             public void shareFail(String s) {
                 Log.d(TAG, "s==" + s);
             }
 	});
-
+```
 ## 6.Firebase推送 ##
 ####1.在Firebase创建的应用下载json文件####
  <img src="/images/Android_9.png" width = "550" height = "400" alt="Android_9" align=center />

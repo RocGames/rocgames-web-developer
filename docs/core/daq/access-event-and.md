@@ -13,22 +13,18 @@
 # 参数说明
 | 参数      |  类型  | 说明   |
 | :-------- | :----: | :------ |
-| eventKey | 字符串 | 埋点参数字段，具体的传值请看埋点文档 |
-| parMaps  | 字符串 | 埋点所需传的参数集合，具体的传值请看埋点文档 |
+| eventKey | 字符串 | 埋点参数字段，具体的传值请看埋点文档的事件名 |
+| parMaps  | 字符串 | 埋点所需传的参数集合，具体的传值请看埋点文档携带参数 |
 
 > [!WARNING|label:注意|iconVisibility:hidden]
 > 
-> **eventKey 复制埋点文档的以下值**
+> **eventKey 复制埋点文档的事件名值**
 >
-
-<img src="/images/Android_11.png" width = "380" height = "500" alt="Android_11" align=center />
 
 > [!WARNING|label:注意|iconVisibility:hidden]
 > 
-> **parMaps key值复制具体对应埋点需求的附加参数这列，value需要游戏传具体值**
+> **parMaps key值复制具体对应埋点需求的携带参数，value需要游戏传具体值**
 >
-
-<img src="/images/Android_12.png" width = "460" height = "700" alt="Android_12" align=center />
 
 # 示例代码
 ```java
@@ -37,6 +33,6 @@
     params.put("uid","1000393");
     params.put("serverid","1");
     params.put("playerid","d476b70c-961d-47cc-a62c-983b1a4ae2c0");
-    MyExternalInterface.getInstance().SDKAdjustPoints(this,"click_entry_game",params);
+    MyExternalInterface.getInstance().SDKAdjustPoints(this,"entry_game",params);
 	
 ```
