@@ -1194,35 +1194,35 @@ public void SDKInit(Activity activity,String gameId,String appkey,String channel
 </tbody>
 </table>
 <h4 id="2-&#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;"><a name="2-&#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#2-&#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code>MyExternalInterface.getInstance().SDKInit(MainActivity.this, GAMEID, SIGN_KEY, CHANNELID, new SDKInterfaceInitListener() {
-        @Override
-        public void initSuccess(String result) {
-            Log.d(TAG, &quot;SDKInitsuccese-result====&quot; + result);
-
-            if(result.equals(&quot;true&quot;)){
-                //&#x540C;&#x610F;&#x4E86;&#x534F;&#x8BAE;&#x76F4;&#x63A5;&#x767B;&#x5F55;
-                login();
-            }else{
-                //&#x6CA1;&#x6709;&#x540C;&#x610F;&#x534F;&#x8BAE;&#x8C03;&#x7528;&#x534F;&#x8BAE;&#x754C;&#x9762;
-                MyExternalInterface.getInstance().SDKProtocol(MainActivity.this, new BaseListener() {
-                    @Override
-                    public void onSuccess(int code, String msg) {
-                        //&#x540C;&#x610F;&#x534F;&#x8BAE;
-                        login();
-                    }
-                    @Override
-                    public void onFail(int code, String msg) {
-                        Log.d(TAG,&quot;&#x4E0D;&#x540C;&#x610F;&#x534F;&#x8BAE; code=&quot;+code);
-                    }
-                });
+<pre><code class="lang-java">    MyExternalInterface.getInstance().SDKInit(MainActivity.<span class="hljs-keyword">this</span>, GAMEID, SIGN_KEY, CHANNELID, <span class="hljs-keyword">new</span> SDKInterfaceInitListener() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">initSuccess</span><span class="hljs-params">(String result)</span> </span>{
+                Log.d(TAG, <span class="hljs-string">&quot;SDKInitsuccese-result====&quot;</span> + result);
+                <span class="hljs-keyword">if</span>(result.equals(<span class="hljs-string">&quot;true&quot;</span>)){
+                    <span class="hljs-comment">//&#x540C;&#x610F;&#x4E86;&#x534F;&#x8BAE;&#x76F4;&#x63A5;&#x767B;&#x5F55;</span>
+                    login();
+                }<span class="hljs-keyword">else</span>{
+                    <span class="hljs-comment">//&#x6CA1;&#x6709;&#x540C;&#x610F;&#x534F;&#x8BAE;&#x8C03;&#x7528;&#x534F;&#x8BAE;&#x754C;&#x9762;</span>
+                    MyExternalInterface.getInstance().SDKProtocol(MainActivity.<span class="hljs-keyword">this</span>, <span class="hljs-keyword">new</span> BaseListener() {
+                        <span class="hljs-meta">@Override</span>
+                        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSuccess</span><span class="hljs-params">(<span class="hljs-keyword">int</span> code, String msg)</span> </span>{
+                            <span class="hljs-comment">//&#x540C;&#x610F;&#x534F;&#x8BAE;</span>
+                            login();
+                        }
+                        <span class="hljs-meta">@Override</span>
+                        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onFail</span><span class="hljs-params">(<span class="hljs-keyword">int</span> code, String msg)</span> </span>{
+                            Log.d(TAG,<span class="hljs-string">&quot;&#x4E0D;&#x540C;&#x610F;&#x534F;&#x8BAE; code=&quot;</span>+code);
+                        }
+                    });
+                }
             }
-        }
-        @Override
-        public void initFail(String result) {
-            Log.d(TAG, &quot;SDKInitfail-result====&quot; + result);
-        }
-    });
-</code></pre><h2 id="3-&#x767B;&#x5F55;"><a name="3-&#x767B;&#x5F55;" class="anchor-navigation-ex-anchor" href="#3-&#x767B;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x767B;&#x5F55;</h2>
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">initFail</span><span class="hljs-params">(String result)</span> </span>{
+                Log.d(TAG, <span class="hljs-string">&quot;SDKInitfail-result====&quot;</span> + result);
+            }
+        });
+</code></pre>
+<h2 id="3-&#x767B;&#x5F55;"><a name="3-&#x767B;&#x5F55;" class="anchor-navigation-ex-anchor" href="#3-&#x767B;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x767B;&#x5F55;</h2>
 <pre><code>&#x63A5;&#x53E3;&#x5B9A;&#x4E49;&#xFF1A;
     public void SDKLogin(Activity activity,SDKLoginListener listener)
 </code></pre><h4 id="1-&#x63A5;&#x53E3;&#x53C2;&#x6570;&#x8BF4;&#x660E;_1"><a name="1-&#x63A5;&#x53E3;&#x53C2;&#x6570;&#x8BF4;&#x660E;_1" class="anchor-navigation-ex-anchor" href="#1-&#x63A5;&#x53E3;&#x53C2;&#x6570;&#x8BF4;&#x660E;_1"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x63A5;&#x53E3;&#x53C2;&#x6570;&#x8BF4;&#x660E;</h4>
@@ -1313,44 +1313,44 @@ public void onSuccess(int code, SdkLogincallBack sdkLogincallBack)
 </tbody>
 </table>
 <h4 id="3-&#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;"><a name="3-&#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#3-&#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code> MyExternalInterface.getInstance().SDKLogin(MainActivity.this, new SDKLoginListener() {
-        @Override
-        public void onSuccess(int code, SdkLogincallBack sdkLogincallBack) {
-            String gameSign = sdkLogincallBack.gameSign;
-            String loginTime = sdkLogincallBack.loginTime;
-            String uid = sdkLogincallBack.uid;
-            String username = sdkLogincallBack.username;
-            String loginWay = sdkLogincallBack.loginWay;
-            String fbBind = sdkLogincallBack.fbBind;
-            String twitterBind = sdkLogincallBack.twitterBind;
-            String subId = sdkLogincallBack.subId;
-            String mainId = sdkLogincallBack.mainId;
-            String token = sdkLogincallBack.token;
-            Log.d(TAG, &quot;gameSign==&quot; + gameSign + &quot;\nloginTime==&quot; + loginTime + &quot;\nuid==&quot; + uid + &quot;\nusername==&quot; + username
-                    + &quot;\nloginWay==&quot; + loginWay + &quot;\nfbBind==&quot; + fbBind + &quot;\ntwitterBind==&quot; + twitterBind+ &quot;\nsubId==&quot; + subId+ &quot;\nmainId==&quot; + mainId
-                    + &quot;\ntoken==&quot; + token);
-        }
+<pre><code class="lang-java">     MyExternalInterface.getInstance().SDKLogin(MainActivity.<span class="hljs-keyword">this</span>, <span class="hljs-keyword">new</span> SDKLoginListener() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSuccess</span><span class="hljs-params">(<span class="hljs-keyword">int</span> code, SdkLogincallBack sdkLogincallBack)</span> </span>{
+                String gameSign = sdkLogincallBack.gameSign;
+                String loginTime = sdkLogincallBack.loginTime;
+                String uid = sdkLogincallBack.uid;
+                String username = sdkLogincallBack.username;
+                String loginWay = sdkLogincallBack.loginWay;
+                String fbBind = sdkLogincallBack.fbBind;
+                String twitterBind = sdkLogincallBack.twitterBind;
+                String subId = sdkLogincallBack.subId;
+                String mainId = sdkLogincallBack.mainId;
+                String token = sdkLogincallBack.token;
+                Log.d(TAG, <span class="hljs-string">&quot;gameSign==&quot;</span> + gameSign + <span class="hljs-string">&quot;\nloginTime==&quot;</span> + loginTime + <span class="hljs-string">&quot;\nuid==&quot;</span> + uid + <span class="hljs-string">&quot;\nusername==&quot;</span> + username
+                        + <span class="hljs-string">&quot;\nloginWay==&quot;</span> + loginWay + <span class="hljs-string">&quot;\nfbBind==&quot;</span> + fbBind + <span class="hljs-string">&quot;\ntwitterBind==&quot;</span> + twitterBind+ <span class="hljs-string">&quot;\nsubId==&quot;</span> + subId+ <span class="hljs-string">&quot;\nmainId==&quot;</span> + mainId
+                        + <span class="hljs-string">&quot;\ntoken==&quot;</span> + token);
+            }
 
-        @Override
-        public void onFail(int code, String msg) {
-            Log.d(TAG, &quot;code==&quot; + code + &quot;\nmsg==&quot; + msg);
-        }
-    });
-</code></pre><h4 id="4-&#x5B9E;&#x73B0;onactivityresult-&#x65B9;&#x6CD5;"><a name="4-&#x5B9E;&#x73B0;onactivityresult-&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#4-&#x5B9E;&#x73B0;onactivityresult-&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x5B9E;&#x73B0;onActivityResult &#x65B9;&#x6CD5;</h4>
-<pre><code>@Override
-public void onActivityResult(int requestCode, int resultCode, Intent data) {
-     MyExternalInterface.getInstance().onActivityResult(MainActivity.this, requestCode, resultCode, data, new BaseListener() {
-        @Override
-        public void onSuccess(int code, String msg) {
-
-        }
-        @Override
-        public void onFail(int code, String msg) {
-
-        }
-    });
-}
-</code></pre><h2 id="3&#x8D26;&#x53F7;&#x7BA1;&#x7406;&#x754C;&#x9762;"><a name="3&#x8D26;&#x53F7;&#x7BA1;&#x7406;&#x754C;&#x9762;" class="anchor-navigation-ex-anchor" href="#3&#x8D26;&#x53F7;&#x7BA1;&#x7406;&#x754C;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a>3.&#x8D26;&#x53F7;&#x7BA1;&#x7406;&#x754C;&#x9762;</h2>
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onFail</span><span class="hljs-params">(<span class="hljs-keyword">int</span> code, String msg)</span> </span>{
+                Log.d(TAG, <span class="hljs-string">&quot;code==&quot;</span> + code + <span class="hljs-string">&quot;\nmsg==&quot;</span> + msg);
+            }
+        });
+</code></pre>
+<h4 id="4-&#x5B9E;&#x73B0;onactivityresult-&#x65B9;&#x6CD5;"><a name="4-&#x5B9E;&#x73B0;onactivityresult-&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#4-&#x5B9E;&#x73B0;onactivityresult-&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x5B9E;&#x73B0;onActivityResult &#x65B9;&#x6CD5;</h4>
+<pre><code class="lang-java">    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onActivityResult</span><span class="hljs-params">(<span class="hljs-keyword">int</span> requestCode, <span class="hljs-keyword">int</span> resultCode, Intent data)</span> </span>{
+         MyExternalInterface.getInstance().onActivityResult(MainActivity.<span class="hljs-keyword">this</span>, requestCode, resultCode, data, <span class="hljs-keyword">new</span> BaseListener() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSuccess</span><span class="hljs-params">(<span class="hljs-keyword">int</span> code, String msg)</span> </span>{     
+            }
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onFail</span><span class="hljs-params">(<span class="hljs-keyword">int</span> code, String msg)</span> </span>{      
+            }
+        });
+    }
+</code></pre>
+<h2 id="3&#x8D26;&#x53F7;&#x7BA1;&#x7406;&#x754C;&#x9762;"><a name="3&#x8D26;&#x53F7;&#x7BA1;&#x7406;&#x754C;&#x9762;" class="anchor-navigation-ex-anchor" href="#3&#x8D26;&#x53F7;&#x7BA1;&#x7406;&#x754C;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a>3.&#x8D26;&#x53F7;&#x7BA1;&#x7406;&#x754C;&#x9762;</h2>
 <pre><code>&#x63A5;&#x53E3;&#x5B9A;&#x4E49;&#xFF1A;
 public void SDKAccountManage(Activity activity, SDKInterfaceExitListener exitListener)
 </code></pre><h4 id="1-&#x63A5;&#x53E3;&#x53C2;&#x6570;&#x8BF4;&#x660E;_2"><a name="1-&#x63A5;&#x53E3;&#x53C2;&#x6570;&#x8BF4;&#x660E;_2" class="anchor-navigation-ex-anchor" href="#1-&#x63A5;&#x53E3;&#x53C2;&#x6570;&#x8BF4;&#x660E;_2"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x63A5;&#x53E3;&#x53C2;&#x6570;&#x8BF4;&#x660E;</h4>
@@ -1376,18 +1376,19 @@ public void SDKAccountManage(Activity activity, SDKInterfaceExitListener exitLis
 </tbody>
 </table>
 <h4 id="2-&#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;_1"><a name="2-&#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;_1" class="anchor-navigation-ex-anchor" href="#2-&#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;_1"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
-<pre><code>MyExternalInterface.getInstance().SDKAccountManage(this, new SDKInterfaceExitListener() {
-        @Override
-        public void exitSuccess(String result) {
-                //&#x70B9;&#x4E86;&#x5207;&#x6362;&#x8D26;&#x53F7;&#x786E;&#x5B9A;&#x63A5;&#x53E3;&#xFF0C;&#x6E38;&#x620F;&#x9700;&#x8981;&#x8FD4;&#x56DE;&#x767B;&#x5F55;&#x754C;&#x9762;&#xFF0C;&#x518D;&#x6B21;&#x8C03;&#x7528;sdk&#x767B;&#x5F55;
-                BaseSDKUtils.logD(TAG,&quot;exitSuccess====&quot;+result);
-                sdkLogin();
-        }
-        @Override
-        public void exitFail(String result) {
-        }
-    });
-</code></pre><h2 id="4&#x751F;&#x547D;&#x5468;&#x671F;&#x65B9;&#x6CD5;"><a name="4&#x751F;&#x547D;&#x5468;&#x671F;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#4&#x751F;&#x547D;&#x5468;&#x671F;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>4.&#x751F;&#x547D;&#x5468;&#x671F;&#x65B9;&#x6CD5;</h2>
+<pre><code class="lang-java">    MyExternalInterface.getInstance().SDKAccountManage(<span class="hljs-keyword">this</span>, <span class="hljs-keyword">new</span> SDKInterfaceExitListener() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">exitSuccess</span><span class="hljs-params">(String result)</span> </span>{
+                    <span class="hljs-comment">//&#x70B9;&#x4E86;&#x5207;&#x6362;&#x8D26;&#x53F7;&#x786E;&#x5B9A;&#x63A5;&#x53E3;&#xFF0C;&#x6E38;&#x620F;&#x9700;&#x8981;&#x8FD4;&#x56DE;&#x767B;&#x5F55;&#x754C;&#x9762;&#xFF0C;&#x518D;&#x6B21;&#x8C03;&#x7528;sdk&#x767B;&#x5F55;</span>
+                    BaseSDKUtils.logD(TAG,<span class="hljs-string">&quot;exitSuccess====&quot;</span>+result);
+                    sdkLogin();
+            }
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">exitFail</span><span class="hljs-params">(String result)</span> </span>{
+            }
+        });
+</code></pre>
+<h2 id="4&#x751F;&#x547D;&#x5468;&#x671F;&#x65B9;&#x6CD5;"><a name="4&#x751F;&#x547D;&#x5468;&#x671F;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#4&#x751F;&#x547D;&#x5468;&#x671F;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>4.&#x751F;&#x547D;&#x5468;&#x671F;&#x65B9;&#x6CD5;</h2>
 <h4 id="1-&#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;"><a name="1-&#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#1-&#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
 <p>&#x5728;Activity&#x7684;onStart&#x91CC;&#x8C03;&#x7528;</p>
 <pre><code>MyExternalInterface.getInstance().onStart(MainActivity.this, &quot;&quot;);
@@ -1484,52 +1485,54 @@ msg = &quot;1&quot;, &#x4E3A;&#x5206;&#x4EAB;&#x5931;&#x8D25;&#x72B6;&#x6001;, &
 msg =&quot;2&quot;;&#x4E3A;&#x5206;&#x4EAB;&#x53D6;&#x6D88;&#x72B6;&#x6001;&#xFF0C;&#x56DE;&#x8C03;shareFail
 msg =&quot;3&quot;;&#x4E3A;&#x7528;&#x6237;&#x6CA1;&#x6709;&#x5B89;&#x88C5;Facebook app&#xFF0C;&#x56DE;&#x8C03;shareFail
 </code></pre><h5 id="c&#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;"><a name="c&#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#c&#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>c.&#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h5>
-<pre><code>ShareInfo shareInfo = new ShareInfo();
-    shareInfo.andLink = &quot;https://www.baidu.com&quot;;
-    shareInfo.dsp = &quot;&#x6D4B;&#x8BD5;&#x5206;&#x4EAB;&quot;;
-    shareInfo.uid = &quot;10000&quot;;
-    shareInfo.serverId = &quot;1&quot;;
-    shareInfo.roleId = &quot;123&quot;;
-    shareInfo.shareId = &quot;maipage&quot;;
-    MyExternalInterface.getInstance().SDKFacebookShare(this, shareInfo, new SDKInterfaceShareListener() {
-        @Override
-        public void shareSuccess(String s) {
-            Log.d(TAG, &quot;s==&quot; + s);
-        }
+<pre><code class="lang-java">    ShareInfo shareInfo = <span class="hljs-keyword">new</span> ShareInfo();
+        shareInfo.andLink = <span class="hljs-string">&quot;https://www.baidu.com&quot;</span>;
+        shareInfo.dsp = <span class="hljs-string">&quot;&#x6D4B;&#x8BD5;&#x5206;&#x4EAB;&quot;</span>;
+        shareInfo.uid = <span class="hljs-string">&quot;10000&quot;</span>;
+        shareInfo.serverId = <span class="hljs-string">&quot;1&quot;</span>;
+        shareInfo.roleId = <span class="hljs-string">&quot;123&quot;</span>;
+        shareInfo.shareId = <span class="hljs-string">&quot;maipage&quot;</span>;
+        MyExternalInterface.getInstance().SDKFacebookShare(<span class="hljs-keyword">this</span>, shareInfo, <span class="hljs-keyword">new</span> SDKInterfaceShareListener() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">shareSuccess</span><span class="hljs-params">(String s)</span> </span>{
+                Log.d(TAG, <span class="hljs-string">&quot;s==&quot;</span> + s);
+            }
 
-        @Override
-        public void shareFail(String s) {
-            Log.d(TAG, &quot;s==&quot; + s);
-        }
-    });
-</code></pre><h4 id="2facebook&#x5206;&#x4EAB;&#x672C;&#x5730;&#x89C6;&#x9891;"><a name="2facebook&#x5206;&#x4EAB;&#x672C;&#x5730;&#x89C6;&#x9891;" class="anchor-navigation-ex-anchor" href="#2facebook&#x5206;&#x4EAB;&#x672C;&#x5730;&#x89C6;&#x9891;"><i class="fa fa-link" aria-hidden="true"></i></a>2.Facebook&#x5206;&#x4EAB;&#x672C;&#x5730;&#x89C6;&#x9891;</h4>
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">shareFail</span><span class="hljs-params">(String s)</span> </span>{
+                Log.d(TAG, <span class="hljs-string">&quot;s==&quot;</span> + s);
+            }
+        });
+</code></pre>
+<h4 id="2facebook&#x5206;&#x4EAB;&#x672C;&#x5730;&#x89C6;&#x9891;"><a name="2facebook&#x5206;&#x4EAB;&#x672C;&#x5730;&#x89C6;&#x9891;" class="anchor-navigation-ex-anchor" href="#2facebook&#x5206;&#x4EAB;&#x672C;&#x5730;&#x89C6;&#x9891;"><i class="fa fa-link" aria-hidden="true"></i></a>2.Facebook&#x5206;&#x4EAB;&#x672C;&#x5730;&#x89C6;&#x9891;</h4>
 <pre><code>&#x63A5;&#x53E3;&#x5B9A;&#x4E49;&#xFF1A;
 public void SDKFacebookShareVideo (Activity activity, ShareInfo shareInfo,File videoFile, SDKInterfaceShareListener callback)
 &#x53C2;&#x6570;&#xFF1A;File videoFile &#x4F20;&#x5165;&#x672C;&#x5730;&#x89C6;&#x9891;&#x7684;File&#x76EE;&#x5F55;
 
 UpdateInfo&#x540C;&#x4E0A;&#x8BF4;&#x660E;
 </code></pre><h5 id="a&#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;"><a name="a&#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#a&#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>a.&#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h5>
-<pre><code>File dir = this.getExternalFilesDir(&quot;video&quot;);
- File loadingvideo = new File(dir, &quot;shareVideo.mp4&quot;);
+<pre><code class="lang-java">    File dir = <span class="hljs-keyword">this</span>.getExternalFilesDir(<span class="hljs-string">&quot;video&quot;</span>);
+     File loadingvideo = <span class="hljs-keyword">new</span> File(dir, <span class="hljs-string">&quot;shareVideo.mp4&quot;</span>);
 
-ShareInfo shareInfo = new ShareInfo();
-    shareInfo.uid = &quot;10000&quot;;
-    shareInfo.serverId = &quot;1&quot;;
-    shareInfo.roleId = &quot;123&quot;;
-    shareInfo.shareId = &quot;maipage&quot;;
+    ShareInfo shareInfo = <span class="hljs-keyword">new</span> ShareInfo();
+        shareInfo.uid = <span class="hljs-string">&quot;10000&quot;</span>;
+        shareInfo.serverId = <span class="hljs-string">&quot;1&quot;</span>;
+        shareInfo.roleId = <span class="hljs-string">&quot;123&quot;</span>;
+        shareInfo.shareId = <span class="hljs-string">&quot;maipage&quot;</span>;
 
-    MyExternalInterface.getInstance().SDKFacebookShareVideo (this,shareInfo,loadingvideo,new SDKInterfaceShareListener(){
-        @Override
-        public void shareSuccess(String s) {
-            Log.d(TAG, &quot;s==&quot; + s);
-        }
+        MyExternalInterface.getInstance().SDKFacebookShareVideo (<span class="hljs-keyword">this</span>,shareInfo,loadingvideo,<span class="hljs-keyword">new</span> SDKInterfaceShareListener(){
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">shareSuccess</span><span class="hljs-params">(String s)</span> </span>{
+                Log.d(TAG, <span class="hljs-string">&quot;s==&quot;</span> + s);
+            }
 
-        @Override
-        public void shareFail(String s) {
-            Log.d(TAG, &quot;s==&quot; + s);
-        }
-});
-</code></pre><h4 id="3facebook&#x5206;&#x4EAB;&#x56FE;&#x7247;"><a name="3facebook&#x5206;&#x4EAB;&#x56FE;&#x7247;" class="anchor-navigation-ex-anchor" href="#3facebook&#x5206;&#x4EAB;&#x56FE;&#x7247;"><i class="fa fa-link" aria-hidden="true"></i></a>3.Facebook&#x5206;&#x4EAB;&#x56FE;&#x7247;</h4>
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">shareFail</span><span class="hljs-params">(String s)</span> </span>{
+                Log.d(TAG, <span class="hljs-string">&quot;s==&quot;</span> + s);
+            }
+    });
+</code></pre>
+<h4 id="3facebook&#x5206;&#x4EAB;&#x56FE;&#x7247;"><a name="3facebook&#x5206;&#x4EAB;&#x56FE;&#x7247;" class="anchor-navigation-ex-anchor" href="#3facebook&#x5206;&#x4EAB;&#x56FE;&#x7247;"><i class="fa fa-link" aria-hidden="true"></i></a>3.Facebook&#x5206;&#x4EAB;&#x56FE;&#x7247;</h4>
 <pre><code>&#x7528;&#x6237;&#x5FC5;&#x987B;&#x5B89;&#x88C5; 7.0 &#x6216;&#x66F4;&#x9AD8;&#x7248;&#x672C;&#x7684;&#x539F;&#x751F; Android &#x7248; Facebook &#x5E94;&#x7528;&#x624D;&#x80FD;&#x5206;&#x4EAB;&#x3002;
 &#x63A5;&#x53E3;&#x5B9A;&#x4E49;&#xFF1A;
 public void SDKFacebookSharePicture (Activity activity, ShareInfo shareInfo, Bitmap imageBitmap, SDKInterfaceShareListener callback)
@@ -1537,29 +1540,27 @@ public void SDKFacebookSharePicture (Activity activity, ShareInfo shareInfo, Bit
 
 UpdateInfo&#x540C;&#x4E0A;&#x8BF4;&#x660E;
 </code></pre><h5 id="a&#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;_1"><a name="a&#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;_1" class="anchor-navigation-ex-anchor" href="#a&#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;_1"><i class="fa fa-link" aria-hidden="true"></i></a>a.&#x8C03;&#x7528;&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h5>
-<pre><code>File dir = this.getExternalFilesDir(&quot;picture&quot;);
-        File sharePicture = new File(dir, &quot;sharePicture.png&quot;);
-        Uri uri = Uri.fromFile(sharePicture);
-        Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), uri);
-
-ShareInfo shareInfo = new ShareInfo();
-    shareInfo.uid = &quot;10000&quot;;
-    shareInfo.serverId = &quot;1&quot;;
-    shareInfo.roleId = &quot;123&quot;;
-    shareInfo.shareId = &quot;maipage&quot;;
-
-    MyExternalInterface.getInstance().SDKFacebookSharePicture (this,shareInfo, bitmap,new SDKInterfaceShareListener(){
-        @Override
-        public void shareSuccess(String s) {
-            Log.d(TAG, &quot;s==&quot; + s);
-        }
-
-        @Override
-        public void shareFail(String s) {
-            Log.d(TAG, &quot;s==&quot; + s);
-        }
-});
-</code></pre><h2 id="6firebase&#x63A8;&#x9001;"><a name="6firebase&#x63A8;&#x9001;" class="anchor-navigation-ex-anchor" href="#6firebase&#x63A8;&#x9001;"><i class="fa fa-link" aria-hidden="true"></i></a>6.Firebase&#x63A8;&#x9001;</h2>
+<pre><code class="lang-java">    File dir = <span class="hljs-keyword">this</span>.getExternalFilesDir(<span class="hljs-string">&quot;picture&quot;</span>);
+            File sharePicture = <span class="hljs-keyword">new</span> File(dir, <span class="hljs-string">&quot;sharePicture.png&quot;</span>);
+            Uri uri = Uri.fromFile(sharePicture);
+            Bitmap bitmap = MediaStore.Images.Media.getBitmap(<span class="hljs-keyword">this</span>.getContentResolver(), uri);
+    ShareInfo shareInfo = <span class="hljs-keyword">new</span> ShareInfo();
+        shareInfo.uid = <span class="hljs-string">&quot;10000&quot;</span>;
+        shareInfo.serverId = <span class="hljs-string">&quot;1&quot;</span>;
+        shareInfo.roleId = <span class="hljs-string">&quot;123&quot;</span>;
+        shareInfo.shareId = <span class="hljs-string">&quot;maipage&quot;</span>;
+        MyExternalInterface.getInstance().SDKFacebookSharePicture (<span class="hljs-keyword">this</span>,shareInfo, bitmap,<span class="hljs-keyword">new</span> SDKInterfaceShareListener(){
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">shareSuccess</span><span class="hljs-params">(String s)</span> </span>{
+                Log.d(TAG, <span class="hljs-string">&quot;s==&quot;</span> + s);
+            }
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">shareFail</span><span class="hljs-params">(String s)</span> </span>{
+                Log.d(TAG, <span class="hljs-string">&quot;s==&quot;</span> + s);
+            }
+    });
+</code></pre>
+<h2 id="6firebase&#x63A8;&#x9001;"><a name="6firebase&#x63A8;&#x9001;" class="anchor-navigation-ex-anchor" href="#6firebase&#x63A8;&#x9001;"><i class="fa fa-link" aria-hidden="true"></i></a>6.Firebase&#x63A8;&#x9001;</h2>
 <h4 id="1&#x5728;firebase&#x521B;&#x5EFA;&#x7684;&#x5E94;&#x7528;&#x4E0B;&#x8F7D;json&#x6587;&#x4EF6;"><a name="1&#x5728;firebase&#x521B;&#x5EFA;&#x7684;&#x5E94;&#x7528;&#x4E0B;&#x8F7D;json&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#1&#x5728;firebase&#x521B;&#x5EFA;&#x7684;&#x5E94;&#x7528;&#x4E0B;&#x8F7D;json&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.&#x5728;Firebase&#x521B;&#x5EFA;&#x7684;&#x5E94;&#x7528;&#x4E0B;&#x8F7D;json&#x6587;&#x4EF6;</h4>
 <p> <img src="../../images/Android_9.png" width="550" height="400" alt="Android_9" align="center">
 &#x5728;AndroidManifest.xml &#x7684;application&#x8282;&#x70B9;&#x4E0B;&#x52A0;&#x5165;</p>
@@ -1680,7 +1681,7 @@ if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.TIRAMISU)
 -keep class com.myBest.sdk.helpers.MyInputMapProvider{ *; }
 
 #---------------------------------MySDK---------------------------------
-</code></pre><footer class="page-footer-ex"> <span class="page-footer-ex-copyright">  Copyright &#xA9; <a href="http://roc.games" target="_blank">ROC Games</a> 2022  </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2022-11-21 19:07:52 </span> </footer>
+</code></pre><footer class="page-footer-ex"> <span class="page-footer-ex-copyright">  Copyright &#xA9; <a href="http://roc.games" target="_blank">ROC Games</a> 2022  </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2022-11-21 19:24:42 </span> </footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
                                 </section>
@@ -1714,7 +1715,7 @@ if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.TIRAMISU)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Android","level":"2.1.2.1","depth":3,"next":{"title":"IOS","level":"2.1.2.2","depth":3,"path":"core/login/access-ios.md","ref":"core/login/access-ios.md","articles":[]},"previous":{"title":"功能接入","level":"2.1.2","depth":2,"ref":"","articles":[{"title":"Android","level":"2.1.2.1","depth":3,"path":"core/login/access-and.md","ref":"core/login/access-and.md","articles":[]},{"title":"IOS","level":"2.1.2.2","depth":3,"path":"core/login/access-ios.md","ref":"core/login/access-ios.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","ga","code","chapter-fold","expandable-chapters","expandable-chapters-small","edit-link","search-pro","ancre-navigation","splitter","flexible-alerts","auto-scroll-table","popup","theme-api","page-footer-ex"],"root":"./docs","styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"page-footer-ex":{"copyright":" Copyright © [ROC Games](http://roc.games) 2022 ","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"splitter":{},"search-pro":{},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-api":{"languages":[],"split":true,"theme":"dark"},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"ga":{"configuration":"auto","token":"UA-44087823-2"},"edit-link":{"label":"编辑本页","base":"https://github.com/RocGames/developer-docs-portal/edit/main/docs"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Mob","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Docs Protal","language":"zh-hans","gitbook":"3.2.3","description":"文档中心"},"file":{"path":"core/login/access-and.md","mtime":"2022-11-21T11:07:52.561Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-21T11:08:47.370Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Android","level":"2.1.2.1","depth":3,"next":{"title":"IOS","level":"2.1.2.2","depth":3,"path":"core/login/access-ios.md","ref":"core/login/access-ios.md","articles":[]},"previous":{"title":"功能接入","level":"2.1.2","depth":2,"ref":"","articles":[{"title":"Android","level":"2.1.2.1","depth":3,"path":"core/login/access-and.md","ref":"core/login/access-and.md","articles":[]},{"title":"IOS","level":"2.1.2.2","depth":3,"path":"core/login/access-ios.md","ref":"core/login/access-ios.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","ga","code","chapter-fold","expandable-chapters","expandable-chapters-small","edit-link","search-pro","ancre-navigation","splitter","flexible-alerts","auto-scroll-table","popup","theme-api","page-footer-ex"],"root":"./docs","styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"page-footer-ex":{"copyright":" Copyright © [ROC Games](http://roc.games) 2022 ","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"splitter":{},"search-pro":{},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-api":{"languages":[],"split":true,"theme":"dark"},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"ga":{"configuration":"auto","token":"UA-44087823-2"},"edit-link":{"label":"编辑本页","base":"https://github.com/RocGames/developer-docs-portal/edit/main/docs"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Mob","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Docs Protal","language":"zh-hans","gitbook":"3.2.3","description":"文档中心"},"file":{"path":"core/login/access-and.md","mtime":"2022-11-21T11:24:42.671Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-21T11:25:47.576Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
