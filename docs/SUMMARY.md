@@ -10,7 +10,7 @@
 * 上线流程
     * [运维验收](started/publish.md)
     * [测试验收](started/test.md)
-    * [运营验收](started/yunying.md)
+    * [运营验收](started/operation.md)
 * [隐私政策](started/agreement.md)
 
 ### 核心模块
