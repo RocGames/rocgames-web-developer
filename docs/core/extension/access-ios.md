@@ -40,7 +40,7 @@
 
 ## 2. Yeeha官网跳转悬浮窗
 
-> *通常进入到游戏后跳用*
+> *通常进入到游戏后调用*
 
 接口参数对象 **dic** 包含字段说明:
 
@@ -49,13 +49,13 @@
 | link | 字符串  | 跳转地址  我们运营提供   |
 
 ```objectivec
-+ (void)azlStorePRoduct:(NSDictionary *)dic;
++ (void)showFloatingView:(NSDictionary *)dic;
 ```
 
 调用示例如下:
 
 ```objectivec
-[ROCSdkManager azlStorePRoduct:@{@"link":@"https://www.baidu.com"];
+[ROCSdkManager showFloatingView:@{@"link":@"https://www.baidu.com"];
 
 ```
 
@@ -176,8 +176,8 @@ BOOL isShowAct = [ROCSdkManager isShowAct:@{@"serverId":@"xxx"}];
 
 | 参数            |  类型     | 说明                |
 | :--------------| :------: | :-------------------|
-| currency       | 字符串    |币种     如:CNY、USD   |
-| currencySymbol | 字符串    |货币符号  如:¥、$      |
+| currency       | 字符串    |币种     如:CNY、USD、TWD   |
+| currencySymbol | 字符串    |货币符号  如:¥、$、NT$       |
 
 ```objectivec
 + (void)getCurrency:(NSString *)productId
@@ -199,9 +199,9 @@ BOOL isShowAct = [ROCSdkManager isShowAct:@{@"serverId":@"xxx"}];
 
 接口参数对象 **dic** 包含字段说明:
 
-| 参数     |  类型  | 说明     |
-| :--------| :----: | :------|
-| link     | 字符串  | web链接 |
+| 参数  | 类型  | 说明    |
+| :----| :---: | :------|
+| link | 字符串 | web链接 |
 
 ```objectivec
 + (void)showWebWindow:(NSDictionary *)dic;
