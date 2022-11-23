@@ -61,6 +61,9 @@
 
 ## 3. info.plist文件配置
 ###  3.1 添加如下code
+
+> *URLSchemes、FacebookAppID、FacebookClientToken、FacebookDisplayName对接时会提供参数表给到*
+
 ```xml
 <key>CFBundleURLTypes</key>
 <array>
@@ -104,10 +107,16 @@
 ### 3.3 value改为应用名
 ￼![](../images/iOSSDK_3.3.png)
 
-### 3.4 添加隐私标签  ⚠️语言国际化可参考隐私本地化表
+### 3.4 添加隐私标签 
+
+> *如果为多语言应用，需要做语言国际化。 翻译相关可参考隐私本地化表*
+
 ￼![](../images/iOSSDK_3.4.png)
 
-### 3.5 添加广告追踪标签 ⚠️语言国际化可参考隐私本地化表
+### 3.5 添加广告追踪标签 
+
+> *如果为多语言应用，需要做语言国际化。 翻译相关可参考隐私本地化表*
+
 ￼![](../images/iOSSDK_3.5.png)
 
 ## 4. 使用cocoaPods集成其它三方库到工程中

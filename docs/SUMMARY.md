@@ -12,6 +12,7 @@
     * [测试验收](started/test.md)
     * [运营验收](started/operation.md)
 * [隐私政策](started/agreement.md)
+* [隐私权限语言国际化对照表](started/access-privacy-table.md)
 
 ### 核心模块
 
@@ -32,6 +33,9 @@
 * 分享
     * [功能接入]
         * [iOS](core/share/access-ios.md)
+* 扩展
+    * [功能接入]
+        * [iOS](core/extension/access-ios.md)
 * 公告
     * [功能介绍](core/notice/overview.md)
     * 功能接入
