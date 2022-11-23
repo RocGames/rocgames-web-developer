@@ -1,4 +1,4 @@
-# 其他的额外功能 #
+# SDK的额外功能接口 #
 ######
 ##1.游戏内活动页##
 ####a.是否开启活动页####
@@ -7,10 +7,11 @@
 	public void SDKisOpenActive (Context context, UpdateInfo updateInfo, OpenActivityListener listener)
 
 	 	UpdateInfo 对象目前只需要传一个serverId参数 
-	 	String serverId  :服务器id
-	
-	 	listener回调boolean ，true表示开启，false表示不开启
 
+| 参数     |  类型  | 说明                         |
+| :--------| :----: | :--------------------------|
+| serverId | String  |游戏区服ID 没有就传字符串@"1"   |
+|listener|boolean|true表示开启，false表示不开启|
 ####b.示例代码####
 ```java
 	UpdateInfo updateInfo = new UpdateInfo();

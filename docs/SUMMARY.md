@@ -32,9 +32,11 @@
     * [最佳实践](core/pay/best-practice.md)
 * 分享
     * [功能接入]
+     	* [Android](core/share/access-android.md)
         * [iOS](core/share/access-ios.md)
 * 扩展
     * [功能接入]
+    	* [Android](core/extension/access-android.md)
         * [iOS](core/extension/access-ios.md)
 * 公告
     * [功能介绍](core/notice/overview.md)
