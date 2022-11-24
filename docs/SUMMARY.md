@@ -11,6 +11,9 @@
     * [运维验收](started/publish.md)
     * [测试验收](started/test.md)
     * [运营验收](started/operation.md)
+      * [运营综合检查项](started/operation/check-items.md)
+      * [运营组工作节点](started/operation/work-node.md)
+      * [运营工作概览](started/operation/operation.md)
 * [隐私政策](started/agreement.md)
 
 ### 核心模块
