@@ -35,7 +35,7 @@ SDK支持多种登录方式
 > 在  _- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options_  方法中调用
 
 示例代码:
-```OC
+```objectivec
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options API_AVAILABLE(ios(9.0)){
     BOOL log = [[ROCSdkManager manager] application:app
                                             openURL:url
@@ -80,7 +80,7 @@ SDK支持多种登录方式
 ### 2.3 登录界面移除
 > *登录成功SDK会自动移除界面，所以通常用不到这个接口*
 
-```OC
+```objectivec
 [ROCSdkManager removeLoginVC];
 ```
 

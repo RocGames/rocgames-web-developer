@@ -15,14 +15,15 @@
       * [运营组工作节点](started/operation/work-node.md)
       * [运营工作概览](started/operation/operation.md)
 * [隐私政策](started/agreement.md)
+* [隐私权限语言国际化对照表](started/access-privacy-table.md)
 
 ### 核心模块
 
 * 登录
     * [功能介绍](core/login/overview.md)
     * 功能接入
-    	* [Android](core/login/access-and.md)
-    	* [IOS](core/login/access-ios.md)
+        * [Android](core/login/access-and.md)
+        * [IOS](core/login/access-ios.md)
     * [简单登录](core/login/simple-login.md)
     * [最佳实践](core/login/best-practice.md)
 * 支付
@@ -33,8 +34,13 @@
     * [简单支付](core/pay/simple-pay.md)
     * [最佳实践](core/pay/best-practice.md)
 * 分享
-    * [功能接入]
+    * [功能接入] 
+        * [Android](core/share/access-android.md)
         * [iOS](core/share/access-ios.md)
+* 扩展
+    * [功能接入]
+        * [Android](core/extension/access-android.md)
+        * [iOS](core/extension/access-ios.md)
 * 公告
     * [功能介绍](core/notice/overview.md)
     * 功能接入

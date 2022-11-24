@@ -3,21 +3,21 @@
 
 >*SDK自带的埋点*
 
-| 事件说明  | 事件名 | 触发时机 |携带参数  |  |  |  |  |  |
-| :------  | :--- | :------ | :-----: |:--: |:--: |:--: |:--: |:--: |
-| sdk初始化 | sdk_initialization_complete | SDK初始化完成触发 | - |- |- |- |- |
-| sdk登录点击事件 | login_start | 点击登陆按钮时触发 | login_type |- |- |- |- |- |
-| sdk登录成功 | login_success | 登录成功时触发 | login_type |- |- |- |- |- |
-| sdk登录失败 | login_unsuccess | 登录失败时触发 | login_type |- |- |- |- |- |
-| sdk注册 | regist_start | 点击SDK注册按钮时触发 | - |- |- |- |- |- |
-| sdk注册成功 | regist_success | 邮箱注册成功、三方账号第一次登录时触发 | login_type |- |- |- |- |- |
-| sdk注册失败 | regist_unsuccess | 邮箱注册失败时触发 | - |- |- |- |- |- |
-| 充值开始 | charge_start | 点击充值按钮时触发 | uid | serverid | playerid | channelid |- |- |
-| 充值成功 | charge_success | 支付成功时触发 | uid | serverid | playerid | channelid | orderid | amount |
-| 充值失败 | charge_unsuccess | 支付失败时触发 | uid | serverid | playerid | channelid | orderid |- |
-| 分享开始 | share_start | 点击分享按钮时触发 | uid | serverid | playerid | channelid | shareid |- |
-| 分享成功 | share_success | 分享成功时触发 | uid | serverid | playerid | channelid | shareid |- |
-| 分享失败 | share_unsuccess | 分享失败时触发 | uid | serverid | playerid | channelid | shareid |- |
+| 事件说明       | 事件名                       | 触发时机                           |携带参数      |         |          |          |         |       |
+| :-----------  | :-------------------------- | :------------------------------- | :--------: |:-------: |:-------: |:-------: |:------: |:----: |
+| sdk初始化      | sdk_initialization_complete | SDK初始化完成触发                   |     -      |    -     |     -    |     -     |   -    |   -   |
+| sdk登录点击事件 | login_start                 | 点击登陆按钮时触发                   | login_type |    -     |     -    |     -     |   -    |   -   |
+| sdk登录成功    | login_success               | 登录成功时触发                     | login_type |    -     |     -    |     -     |   -    |   -   |
+| sdk登录失败    | login_unsuccess             | 登录失败时触发                     | login_type |    -     |     -    |     -     |   -    |   -   |
+| sdk注册       | regist_start                | 点击SDK注册按钮时触发               |     -      |    -     |     -    |     -     |    -   |   -   |
+| sdk注册成功    | regist_success             | 邮箱注册成功、三方账号第一次登录时触发 | login_type |    -      |    -    |     -     |    -    |   -  |
+| sdk注册失败    | regist_unsuccess           | 邮箱注册失败时触发                   |     -      |    -     |     -    |     -     |    -    |  -   |
+| 充值开始       | charge_start               | 点击充值按钮时触发                   | uid        | serverid | playerid | channelid |    -    |  -   |
+| 充值成功       | charge_success             | 支付成功时触发                       | uid        | serverid | playerid | channelid | orderid |amount|
+| 充值失败      | charge_unsuccess            | 支付失败时触发                       | uid        | serverid | playerid | channelid | orderid |  -   |
+| 分享开始      | share_start                 | 点击分享按钮时触发                   | uid        | serverid | playerid | channelid | shareid |  -   |
+| 分享成功      | share_success               | 分享成功时触发                       | uid        | serverid | playerid | channelid | shareid |  -   |
+| 分享失败      | share_unsuccess             | 分享失败时触发                       | uid        | serverid | playerid | channelid | shareid |  -   |
 
 ## 2. 研发埋点
 
@@ -25,7 +25,7 @@
 
 携带参数说明:
 
-> - 均为字符串类型
+> - **均为字符串类型**
 > - **amount:**金额
 > - **level:**当前等级
 > - **orderid:**订单号

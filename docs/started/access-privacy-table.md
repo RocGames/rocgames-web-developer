@@ -1,0 +1,11 @@
+# 用户隐私权限语言国际化对照表
+
+
+
+| 权限 \ 语种     | 简体        | 繁体        |  英文  |   泰语   |
+| :-----: | :-- | :-- | :-- | :-- |
+|  位置    |  我们需要获取您的位置，以便您在组队活动中优先匹配附近的玩家，请允许我们获取您的位置. | 我們需要獲取您的位置，以便您在組隊活動中優先匹配附近的玩家，請允許我們獲取您的位置. | We need your location to match nearby players in team activities,please allow us to get your location. | เราต้องการที่ตั้งของคุณ เพื่อให้ตรงกับผู้เล่นที่อยู่ใกล้เคียงในกิจกรรมจัดทีม โปรดอนุญาตให้เรารับที่ตั้งของคุณ |
+|  相册    | 此App需要您的同意，才能访问照片，以便于在游戏中提供【图片保存及分享】的功能，您可以前往系统“设置-隐私”中随时关闭. | 此App需要您的同意，才能訪問照片，以便於在遊戲中提供【圖片保存及分享】的功能，您可以前往系統「設置-隱私」中隨時關閉. | This App requires your consent to access photos in order to provide the function of [Picture Save and Share] in the game. You can go to the system "Settings - Privacy" to close it at any time. | แอปนี้ต้องได้รับความยินยอมจากคุณในการเข้าถึงรูปภาพเพื่อให้ฟังก์ชัน [บันทึกและแชร์รูปภาพ] ในเกม คุณสามารถไปที่ระบบ "การตั้งค่า - ความเป็นส่วนตัว" เพื่อปิดได้ตลอดเวลา |
+|  相机    | 此App需要您的同意，才能使用相机，以便于在游戏中提供【图片保存及分享】的功能，您可以前往系统“设置-隐私”中随时关闭. | 此App需要您的同意，才能使用相機，以便於在遊戲中提供【圖片保存及分享】的功能，您可以前往系統「設置-隱私」中隨時關閉. | This App requires your consent to access camera in order to provide the function of [Picture Save and Share] in the game. You can go to the system "Settings - Privacy" to close it at any time. | แอพนี้ต้องได้รับความยินยอมจากคุณในการเข้าถึงกล้องเพื่อให้ฟังก์ชั่น [บันทึกและแชร์รูปภาพ] ในเกม คุณสามารถไปที่ระบบ "การตั้งค่า - ความเป็นส่วนตัว" เพื่อปิดได้ตลอดเวลา |
+|  ⻨克⻛   | 此App需要您的同意，才能使用麦克风，以便于在游戏中体验【语音答题、发送语音聊天】等功能，您可以前往系统“设置-隐私”中随时关闭. | 此App需要您的同意，才能使用麥克風，以便於在遊戲中體驗【語音答題、發送語音聊天】等功能，您可以前往系統「設置-隱私」中隨時關閉. | This App requires your consent to access microphone in order to provide the function of [voice questions, voice chat] in the game. You can go to the system "Settings - Privacy" to close it at any time. | แอพนี้ต้องได้รับความยินยอมจากคุณในการเข้าถึงไมโครโฟนเพื่อให้ฟังก์ชั่นของ [คำถามด้วยเสียง, แชทด้วยเสียง] ในเกม คุณสามารถไปที่ระบบ "การตั้งค่า - ความเป็นส่วนตัว" เพื่อปิดได้ตลอดเวลา |
+|  广告追踪 |  通过获取IDFA的访问权限，提供更好、更安全的个性化服务和内容。未经允许，我们不会将其用于其他目的. | 通過獲取IDFA的訪問權限，提供更好、更安全的個性化服務和內容。未經允許，我們不會將其用於其他目的. | Provide better and more secure personalised services and content by gaining access to IDFA. We will not use it for other purposes without permission. | ให้บริการและเนื้อหาส่วนบุคคลที่ดีขึ้นและปลอดภัยยิ่งขึ้นด้วยการเข้าถึง IDFA เราจะไม่ใช้เพื่อวัตถุประสงค์อื่นโดยไม่ได้รับอนุญาต |
