@@ -33,11 +33,11 @@
 * 分享
     * [功能接入]
      	* [Android](core/share/access-android.md)
-        * [iOS](core/share/access-ios.md)
+      * [iOS](core/share/access-ios.md)
 * 扩展
     * [功能接入]
     	* [Android](core/extension/access-android.md)
-        * [iOS](core/extension/access-ios.md)
+      * [iOS](core/extension/access-ios.md)
 * 公告
     * [功能介绍](core/notice/overview.md)
     * 功能接入

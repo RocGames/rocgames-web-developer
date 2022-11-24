@@ -124,14 +124,14 @@ bitcode 设置为: **NO**
 ### 3.4 添加隐私标签 
 
 > - 相册权限、位置权限
-> - 如果为多语言应用，需要做语言国际化。 翻译相关可参考[隐私权限语言国际化对照表](/started/login/access-privacy-table.md) 
+> - 如果为多语言应用，需要做语言国际化。 翻译相关可参考[隐私权限语言国际化对照表](/started/access-privacy-table.md) 
 
 ￼![](../images/iOSSDK_3.4.png)
 
 ### 3.5 添加广告追踪标签 
 
 > - 广告追踪权限
-> - 如果为多语言应用，需要做语言国际化。 翻译相关可参考[隐私权限语言国际化对照表](/started/login/access-privacy-table.md) 
+> - 如果为多语言应用，需要做语言国际化。 翻译相关可参考[隐私权限语言国际化对照表](/started/access-privacy-table.md) 
 
 ￼![](../images/iOSSDK_3.5.png)
 
