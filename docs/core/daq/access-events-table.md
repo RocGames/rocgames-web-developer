@@ -63,7 +63,7 @@
 | 游戏角色创建失败 | creat_role_unsuccess | 创角中断/失败时触发 ⚠️: 该事件仅在最终重试失败后触发 | uid | serverid | playerid | sourceip | targetip |- |- |
 | 首次充值 | pay_1st | 第一次充值成功时触发 | uid | serverid | playerid | channelid | - |- |- |
 | 用户累计充值金额 | pay_total | 用户充值成功时触发 | uid | serverid | playerid | amount (累计金额) | - |- |- |
-| 用户升级 | level_up | 玩家每次升级时触发 | uid | serverid | playerid | - | - |- |- |
+| 用户升级 | level_up | 玩家每次升级时触发 | uid | serverid | playerid | level | - |- |- |
 | 首次通过某关卡 | first_pass | 玩家首次通过某关卡时触发 | uid | serverid | playerid | type（场景类型） | chapterId（场景id） |- |- |
 | 虚拟币消费 | spend_virtual_currency | 玩家消费虚拟币时触发 | uid | serverid | playerid | type（虚拟币类型） | value（数值） | reason（流动原因） | amount（流动后剩余总额度） |
 | 虚拟币赚取 | earn_virtual_currency | 玩家获得虚拟币时触发，包含宝箱，抽奖等渠道 | uid | serverid | playerid | type（虚拟币类型） | value（数值） | reason（流动原因） | amount（流动后剩余总额度）|

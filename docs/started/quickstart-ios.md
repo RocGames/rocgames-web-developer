@@ -136,6 +136,9 @@ bitcode 设置为: **NO**
 ￼![](../images/iOSSDK_3.5.png)
 
 ## 4. 使用cocoaPods集成其它三方库到工程中
+
+SDK所需三方库如下:
+
 ```c
 source 'https://github.com/CocoaPods/Specs.git'
 
