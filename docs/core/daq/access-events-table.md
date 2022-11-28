@@ -68,6 +68,6 @@
 | 虚拟币消费 | spend_virtual_currency | 玩家消费虚拟币时触发 | uid | serverid | playerid | type（虚拟币类型） | value（数值） | reason（流动原因） | amount（流动后剩余总额度） |
 | 虚拟币赚取 | earn_virtual_currency | 玩家获得虚拟币时触发，包含宝箱，抽奖等渠道 | uid | serverid | playerid | type（虚拟币类型） | value（数值） | reason（流动原因） | amount（流动后剩余总额度）|
 | 玩家充值 | earn_currency | 用户成功充值现金货币时触发 | uid | serverid | playerid | type（货币类型, 无特殊就用USD） | value（充值金额） | amount（流动后账户总额度, 通常为游戏币） |- |
-| 玩家充值 | spend_currency | 用户成功消费现金货币时触发 | uid | serverid | playerid | type（货币类型, 无特殊就用USD） | value（充值金额） | amount（流动后账户总额度, 通常为游戏币） |- |
+| 玩家充值 | spend_currency | 用户成功消费现金货币时触发 | uid | serverid | playerid | type（货币类型, 无特殊就用USD） | value（消耗金额） | amount（流动后账户总额度, 通常为游戏币） |- |
 | 商城按钮点击事件 | click_enter_store | 点击商城按钮时触发 | uid | serverid | playerid | - | - |- |- |
 | 新手引导开始 | click_role_guide_start | 新手引导教程开启时触发 | uid | serverid | playerid | guideId（引导id）| - |- |- |
