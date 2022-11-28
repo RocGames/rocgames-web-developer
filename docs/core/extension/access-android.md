@@ -33,8 +33,8 @@ UpdateInfo对象说明
 
 参数名|	类型|参数说明
  ---|----|----
-uid|String|	用户uid
-serverId|String|服务器id
+uid|String|	登陆成功时返回的UID
+serverId|String|游戏区服ID 没有就传字符串"1" 
 roleId|	String|	游戏内的角色id
 actionType|	String|	活动页类型
 
@@ -60,6 +60,11 @@ actionType|	String|	活动页类型
 
    			parMaps：埋点数据集合
 
+| 参数      |  类型  | 说明                         |
+| :-------- | :----: | :------------------------- |
+| uid       | 字符串 | 登陆成功时返回的UID            |
+| serverid  | 字符串 | 游戏区服ID 没有就传字符串"1" |
+| playerid  | 字符串 | 游戏内角色ID          			|
 ####a.示例代码####
 ```java
     MyExternalInterface.getInstance().SDKPreRate(this, new SDKInterfaceInitListener() {
