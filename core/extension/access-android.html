@@ -1331,12 +1331,12 @@ public void SDKWebPay (Activity activity,UpdateInfo updateInfo)
 <tr>
 <td>uid</td>
 <td>String</td>
-<td>&#x7528;&#x6237;uid</td>
+<td>&#x767B;&#x9646;&#x6210;&#x529F;&#x65F6;&#x8FD4;&#x56DE;&#x7684;UID</td>
 </tr>
 <tr>
 <td>serverId</td>
 <td>String</td>
-<td>&#x670D;&#x52A1;&#x5668;id</td>
+<td>&#x6E38;&#x620F;&#x533A;&#x670D;ID &#x6CA1;&#x6709;&#x5C31;&#x4F20;&#x5B57;&#x7B26;&#x4E32;&quot;1&quot; </td>
 </tr>
 <tr>
 <td>roleId</td>
@@ -1370,7 +1370,33 @@ b.&#x63A5;&#x53E3;&#x5B9A;&#x4E49;&#xFF1A;&#x8C03;&#x7528;&#x8BC4;&#x8BBA;
        public void SDKGoogleRate(Activity activity, Map&lt;String, String&gt; parMaps) 
 
            parMaps&#xFF1A;&#x57CB;&#x70B9;&#x6570;&#x636E;&#x96C6;&#x5408;
-</code></pre><h4 id="a&#x793A;&#x4F8B;&#x4EE3;&#x7801;_1"><a name="a&#x793A;&#x4F8B;&#x4EE3;&#x7801;_1" class="anchor-navigation-ex-anchor" href="#a&#x793A;&#x4F8B;&#x4EE3;&#x7801;_1"><i class="fa fa-link" aria-hidden="true"></i></a>a.&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:left">&#x53C2;&#x6570;</th>
+<th style="text-align:center">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">uid</td>
+<td style="text-align:center">&#x5B57;&#x7B26;&#x4E32;</td>
+<td style="text-align:left">&#x767B;&#x9646;&#x6210;&#x529F;&#x65F6;&#x8FD4;&#x56DE;&#x7684;UID</td>
+</tr>
+<tr>
+<td style="text-align:left">serverid</td>
+<td style="text-align:center">&#x5B57;&#x7B26;&#x4E32;</td>
+<td style="text-align:left">&#x6E38;&#x620F;&#x533A;&#x670D;ID &#x6CA1;&#x6709;&#x5C31;&#x4F20;&#x5B57;&#x7B26;&#x4E32;&quot;1&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left">playerid</td>
+<td style="text-align:center">&#x5B57;&#x7B26;&#x4E32;</td>
+<td style="text-align:left">&#x6E38;&#x620F;&#x5185;&#x89D2;&#x8272;ID</td>
+</tr>
+</tbody>
+</table>
+<h4 id="a&#x793A;&#x4F8B;&#x4EE3;&#x7801;_1"><a name="a&#x793A;&#x4F8B;&#x4EE3;&#x7801;_1" class="anchor-navigation-ex-anchor" href="#a&#x793A;&#x4F8B;&#x4EE3;&#x7801;_1"><i class="fa fa-link" aria-hidden="true"></i></a>a.&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h4>
 <pre><code class="lang-java">    MyExternalInterface.getInstance().SDKPreRate(<span class="hljs-keyword">this</span>, <span class="hljs-keyword">new</span> SDKInterfaceInitListener() {
             <span class="hljs-meta">@Override</span>
             <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">initSuccess</span><span class="hljs-params">(String result)</span> </span>{
@@ -1455,7 +1481,7 @@ public void SDKgetCountryCode(String sku, SDKInterfacePayListener listener)
                     });    
         }
 </code></pre>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright">  Copyright &#xA9; <a href="http://roc.games" target="_blank">ROC Games</a> 2022  </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2022-11-28 11:32:02 </span> </footer>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright">  Copyright &#xA9; <a href="http://roc.games" target="_blank">ROC Games</a> 2022  </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2022-11-28 13:45:04 </span> </footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
                                 </section>
@@ -1489,7 +1515,7 @@ public void SDKgetCountryCode(String sku, SDKInterfacePayListener listener)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Android","level":"2.4.1.1","depth":3,"next":{"title":"iOS","level":"2.4.1.2","depth":3,"path":"core/extension/access-ios.md","ref":"core/extension/access-ios.md","articles":[]},"previous":{"title":"[功能接入]","level":"2.4.1","depth":2,"ref":"","articles":[{"title":"Android","level":"2.4.1.1","depth":3,"path":"core/extension/access-android.md","ref":"core/extension/access-android.md","articles":[]},{"title":"iOS","level":"2.4.1.2","depth":3,"path":"core/extension/access-ios.md","ref":"core/extension/access-ios.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","ga","code","chapter-fold","expandable-chapters","expandable-chapters-small","edit-link","search-pro","ancre-navigation","splitter","flexible-alerts","auto-scroll-table","popup","theme-api","page-footer-ex"],"root":"./docs","styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"page-footer-ex":{"copyright":" Copyright © [ROC Games](http://roc.games) 2022 ","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"splitter":{},"search-pro":{},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-api":{"languages":[],"split":true,"theme":"dark"},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"ga":{"configuration":"auto","token":"UA-44087823-2"},"edit-link":{"label":"编辑本页","base":"https://github.com/RocGames/developer-docs-portal/edit/main/docs"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Mob","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Docs Protal","language":"zh-hans","gitbook":"3.2.3","description":"文档中心"},"file":{"path":"core/extension/access-android.md","mtime":"2022-11-28T03:32:02.848Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-28T03:33:09.672Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Android","level":"2.4.1.1","depth":3,"next":{"title":"iOS","level":"2.4.1.2","depth":3,"path":"core/extension/access-ios.md","ref":"core/extension/access-ios.md","articles":[]},"previous":{"title":"[功能接入]","level":"2.4.1","depth":2,"ref":"","articles":[{"title":"Android","level":"2.4.1.1","depth":3,"path":"core/extension/access-android.md","ref":"core/extension/access-android.md","articles":[]},{"title":"iOS","level":"2.4.1.2","depth":3,"path":"core/extension/access-ios.md","ref":"core/extension/access-ios.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","ga","code","chapter-fold","expandable-chapters","expandable-chapters-small","edit-link","search-pro","ancre-navigation","splitter","flexible-alerts","auto-scroll-table","popup","theme-api","page-footer-ex"],"root":"./docs","styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"page-footer-ex":{"copyright":" Copyright © [ROC Games](http://roc.games) 2022 ","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"splitter":{},"search-pro":{},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-api":{"languages":[],"split":true,"theme":"dark"},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"ga":{"configuration":"auto","token":"UA-44087823-2"},"edit-link":{"label":"编辑本页","base":"https://github.com/RocGames/developer-docs-portal/edit/main/docs"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Mob","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Docs Protal","language":"zh-hans","gitbook":"3.2.3","description":"文档中心"},"file":{"path":"core/extension/access-android.md","mtime":"2022-11-28T05:45:04.768Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-28T05:46:09.634Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
