@@ -62,6 +62,9 @@
         * [数据库传输](core/daq/access-rds.md)
     * [简单支付](core/daq/simple-daq.md)
     * [最佳实践](core/daq/best-practice.md)
+* 官网储值
+    * [功能接入]
+        * [服务端](core/recharge/access-php.md)
 
 ### 扩展模块
 
