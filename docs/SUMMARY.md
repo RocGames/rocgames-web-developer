@@ -32,6 +32,7 @@
     * 功能接入
         * [Android](core/pay/access-and.md)
         * [IOS](core/pay/access-ios.md)
+        * [服务端](core/pay/access-php.md)
     * [简单支付](core/pay/simple-pay.md)
     * [最佳实践](core/pay/best-practice.md)
 * 分享

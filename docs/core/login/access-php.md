@@ -7,7 +7,7 @@
 | :--:    | :--:   | :--: | :-- |
 | uid     | int    | 是 | 用户id
 | time    | int    | 是 | 登录时间戳
-| channel | int    | 是 | 注册渠道
+| channel | string | 是 | 登录渠道
 | subId   | string | 是 | Yeeha平台子账号Id（唯一id）
 | mainId  | string | 是 | Yeeha平台UID（可能为空）
 | token   | string | 否 | Yeeha平台登录token
