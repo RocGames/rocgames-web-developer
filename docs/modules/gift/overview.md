@@ -1,5 +1,11 @@
 # 礼包功能介绍
 
+
+## 礼包兑换流程
+
+ <img src="../../images/gift/exchange-process.jpg" width = "773" height = "704" alt="Android_1" align=center />
+
+
 ## 礼包表结构
 
 ### 游戏表
