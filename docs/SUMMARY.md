@@ -24,6 +24,7 @@
     * 功能接入
         * [Android](core/login/access-and.md)
         * [IOS](core/login/access-ios.md)
+        * [服务端](core/login/access-php.md)
     * [简单登录](core/login/simple-login.md)
     * [最佳实践](core/login/best-practice.md)
 * 支付
@@ -31,6 +32,7 @@
     * 功能接入
         * [Android](core/pay/access-and.md)
         * [IOS](core/pay/access-ios.md)
+        * [服务端](core/pay/access-php.md)
     * [简单支付](core/pay/simple-pay.md)
     * [最佳实践](core/pay/best-practice.md)
 * 分享
@@ -60,6 +62,9 @@
         * [数据库传输](core/daq/access-rds.md)
     * [简单支付](core/daq/simple-daq.md)
     * [最佳实践](core/daq/best-practice.md)
+* 官网储值
+    * [功能接入]
+        * [服务端](core/recharge/access-php.md)
 
 ### 扩展模块
 
