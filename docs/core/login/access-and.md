@@ -7,17 +7,17 @@
 ## 1.在自己的Application onCreate里调用 ##
 
     MyExternalInterface.getInstance().APPInit(Application application,boolean isProduction);
-	 
-	参数：isProduction：传入运行的环境
+     
+    参数：isProduction：传入运行的环境
      	  true 表示正式环境 production 
-		  false 表示测试环境sandbox 
+    	  false 表示测试环境sandbox 
 
 <font color=red size=2>注意：正式上线包一定要把环境改成true</font>
 
 ## 2. 初始化SDK ##
 
     接口定义：
-	public void SDKInit(Activity activity,String gameId,String appkey,String channelId,SDKInterfaceInitListener initListener)
+    public void SDKInit(Activity activity,String gameId,String appkey,String channelId,SDKInterfaceInitListener initListener)
 ####1. 接口参数说明####
 
 参数名|类型|参数说明
@@ -59,7 +59,7 @@ initListener|SDKInterfaceInitListener|	初始化回调接口
 ```
 ## 3. 登录 ##
     接口定义：
-		public void SDKLogin(Activity activity,SDKLoginListener listener)
+    	public void SDKLogin(Activity activity,SDKLoginListener listener)
 
 ####1. 接口参数说明####
 参数名|类型|参数说明
@@ -77,8 +77,8 @@ sdkLogincallBack中会得到登录验证时所需要的参数
 gameSign|	string|	登录成功后，得到的加密字符串
 loginTime|	string|	用户登录的时间
 uid	|String|	用户的uid
-subId|	String|	Market平台子账号subId（唯一）
-mainId|	String	|Market平台id（可能为空）
+subId|	String| Yeeha平台子账号subId（⚠️请用该ID和游戏数据做关联对应） 
+mainId|	String	|Yeeha平台id（可能为空）
 token|	string|	主平台token
 username|	String|	用户名
 loginWay|	String|	登录的方式 1:游客登录   2:Fb登录 3:账号密码登录 4:Twitter登陆 5：自动登录 6：Google登录
@@ -127,7 +127,7 @@ twitterBind|	String|	0表示没有绑定，1表示绑定了
 ```
 ## 3.账号管理界面 ##
     接口定义：
-	public void SDKAccountManage(Activity activity, SDKInterfaceExitListener exitListener)
+    public void SDKAccountManage(Activity activity, SDKInterfaceExitListener exitListener)
 ####1. 接口参数说明####
 参数名|类型|参数说明
  ---|----|----
@@ -175,7 +175,7 @@ listener|SDKInterfaceExitListener|切换账号的回调
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
-  	</service>
+    </service>
 
 ####2.在 Android 13+ 上请求运行时通知权限####
 Android 13 引入了用于显示通知的新运行时权限。这会影响在 Android 13 或更高版本上运行且使用 FCM 通知的所有应用。
@@ -201,96 +201,96 @@ Android 13 引入了用于显示通知的新运行时权限。这会影响在 An
 如果开启了混淆 minifyEnabled 是true，则需要在proguard-rules加入以下代码
 
     #---------------------------------MySDK---------------------------------
-	-keepclassmembers class com.myBest.sdk.utils.JsInterationUtils {
+    -keepclassmembers class com.myBest.sdk.utils.JsInterationUtils {
     	<methods>;
-	}
-
-	-dontwarn com.facebook.**
-	-keep class com.facebook.** { *; }
-
-	-dontwarn com.google.**
-	-keep class com.google.** { *; }
-
-	#okhttp3.x
-	-dontwarn okhttp3.**
-	-keep class okhttp3.** { *;}
-	-dontwarn okio.**
-	#retrofit
-	-dontwarn retrofit.**
-	-keep class retrofit.** { *; }
-	-keepattributes Signature
-	-keepattributes Exceptions
-	-dontwarn okio.**
-	#retrofit2.x
-	-dontwarn retrofit2.**
-	-keep class retrofit2.** { *; }
-	-keepattributes Signature
-	-keepattributes Exceptions
-	#--------------------------Adjust-------------------------------
-	-keep public class com.adjust.sdk.** { *; }
-	-keep class com.google.android.gms.common.ConnectionResult {
+    }
+    
+    -dontwarn com.facebook.**
+    -keep class com.facebook.** { *; }
+    
+    -dontwarn com.google.**
+    -keep class com.google.** { *; }
+    
+    #okhttp3.x
+    -dontwarn okhttp3.**
+    -keep class okhttp3.** { *;}
+    -dontwarn okio.**
+    #retrofit
+    -dontwarn retrofit.**
+    -keep class retrofit.** { *; }
+    -keepattributes Signature
+    -keepattributes Exceptions
+    -dontwarn okio.**
+    #retrofit2.x
+    -dontwarn retrofit2.**
+    -keep class retrofit2.** { *; }
+    -keepattributes Signature
+    -keepattributes Exceptions
+    #--------------------------Adjust-------------------------------
+    -keep public class com.adjust.sdk.** { *; }
+    -keep class com.google.android.gms.common.ConnectionResult {
     	int SUCCESS;
-	}
-	-keep class com.google.android.gms.ads.identifier.AdvertisingIdClient {
+    }
+    -keep class com.google.android.gms.ads.identifier.AdvertisingIdClient {
     	com.google.android.gms.ads.identifier.AdvertisingIdClient$Info getAdvertisingIdInfo(android.content.Context);
-	}
-	-keep class com.google.android.gms.ads.identifier.AdvertisingIdClient$Info {
+    }
+    -keep class com.google.android.gms.ads.identifier.AdvertisingIdClient$Info {
     	java.lang.String getId();
     	boolean isLimitAdTrackingEnabled();
-	}
-	-keep class dalvik.system.VMRuntime {
+    }
+    -keep class dalvik.system.VMRuntime {
     	java.lang.String getRuntime();
-	}
-	-keep class android.os.Build {
+    }
+    -keep class android.os.Build {
     	java.lang.String[] SUPPORTED_ABIS;
     	java.lang.String CPU_ABI;
-	}
-	-keep class android.content.res.Configuration {
+    }
+    -keep class android.content.res.Configuration {
     	android.os.LocaleList getLocales();
     	java.util.Locale locale;
-	}
-	-keep class android.os.LocaledList {
+    }
+    -keep class android.os.LocaledList {
     	java.util.Locale get(int);
-	}
-	-keep public class com.android.installreferrer.** { *; }
-	#--------------------------Adjust-------------------------------
-
-	################### region for xUtils
-	-keepattributes Signature,*Annotation*
-	-keep public class org.xutils.** {
+    }
+    -keep public class com.android.installreferrer.** { *; }
+    #--------------------------Adjust-------------------------------
+    
+    ################### region for xUtils
+    -keepattributes Signature,*Annotation*
+    -keep public class org.xutils.** {
     	public protected *;
-	}
-	-keep public interface org.xutils.** {
-   	 public protected *;
-	}
-	-keepclassmembers class * extends org.xutils.** {
-   	 public protected *;
-	}
-	-keepclassmembers @org.xutils.db.annotation.* class * {*;}
-	-keepclassmembers @org.xutils.http.annotation.* class * {*;}
-	-keepclassmembers class * {
-   		 @org.xutils.view.annotation.Event <methods>;
-	}
-	#################### end region
-	##---------------Gson  ----------
-	# Gson uses generic type information stored in a class file when working with fields. Proguard
-	# removes such information by default, so configure it to keep all of it.
-	-keepattributes Signature
-
-	# For using GSON @Expose annotation
-	-keepattributes *Annotation*
-
-	# Gson specific classes
-	-keep class sun.misc.Unsafe { *; }
-	#-keep class com.google.gson.stream.** { *; }
-	##---------------Gson  ----------
-	# Application classes that will be serialized/deserialized over Gson
-	#---------------------------------实体类---------------------------------
-	-keep class com.myBest.sdk.Javabean.** { *; }
-
-	-keep class com.myBest.sdk.Interfaces.** { *; }
-	-keep class com.myBest.sdk.listener.** { *; }
-	-keep class com.android.vending.billing.** { *; }
-	-keep class com.myBest.sdk.helpers.MyInputMapProvider{ *; }
-
-	#---------------------------------MySDK---------------------------------
+    }
+    -keep public interface org.xutils.** {
+     public protected *;
+    }
+    -keepclassmembers class * extends org.xutils.** {
+     public protected *;
+    }
+    -keepclassmembers @org.xutils.db.annotation.* class * {*;}
+    -keepclassmembers @org.xutils.http.annotation.* class * {*;}
+    -keepclassmembers class * {
+    	 @org.xutils.view.annotation.Event <methods>;
+    }
+    #################### end region
+    ##---------------Gson  ----------
+    # Gson uses generic type information stored in a class file when working with fields. Proguard
+    # removes such information by default, so configure it to keep all of it.
+    -keepattributes Signature
+    
+    # For using GSON @Expose annotation
+    -keepattributes *Annotation*
+    
+    # Gson specific classes
+    -keep class sun.misc.Unsafe { *; }
+    #-keep class com.google.gson.stream.** { *; }
+    ##---------------Gson  ----------
+    # Application classes that will be serialized/deserialized over Gson
+    #---------------------------------实体类---------------------------------
+    -keep class com.myBest.sdk.Javabean.** { *; }
+    
+    -keep class com.myBest.sdk.Interfaces.** { *; }
+    -keep class com.myBest.sdk.listener.** { *; }
+    -keep class com.android.vending.billing.** { *; }
+    -keep class com.myBest.sdk.helpers.MyInputMapProvider{ *; }
+    
+    #---------------------------------MySDK---------------------------------
