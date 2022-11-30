@@ -1,8 +1,13 @@
+<style>
+    table{
+        margin: initial;
+    }
+</style>
+
 # 礼包功能介绍
 
 
 ## 礼包兑换流程
-
  <img src="../../images/gift/exchange-process.jpg" width = "773" height = "704" alt="Android_1" align=center />
 
 
@@ -36,7 +41,6 @@ Table：azura_game_gift
 | updated_at       | int(10)     | 更新时间 |                   |
 | deleted_at       | int(10)     | 删除时间 |                   |
 
-
 ### 礼包批次表
 Table：azura_game_gift_batch
 
@@ -58,7 +62,6 @@ Table：azura_game_gift_batch
 | created_at | int(10)     | 创建时间            |               |
 | updated_at | int(10)     | 更新时间            |               |
 | deleted_at | int(10)     | 删除时间            |               |
-
 
 ### 礼包码表
 Table：azura_game_gift_code
