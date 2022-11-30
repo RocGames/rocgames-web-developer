@@ -70,7 +70,7 @@
 
 * 礼包系统
     * [功能介绍](modules/gift/overview.md)
-    * 功能接入
+    * [功能接入](modules/gift/switch-api.md)
     * [最佳实践](modules/gift/best-practice.md)
 * 数据分析
     * [功能介绍](modules/analytics/overview.md)
