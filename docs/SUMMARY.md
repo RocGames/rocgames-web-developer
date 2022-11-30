@@ -24,6 +24,7 @@
     * 功能接入
         * [Android](core/login/access-and.md)
         * [IOS](core/login/access-ios.md)
+        * [服务端](core/login/access-php.md)
     * [简单登录](core/login/simple-login.md)
     * [最佳实践](core/login/best-practice.md)
 * 支付
