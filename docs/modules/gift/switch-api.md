@@ -1,3 +1,8 @@
+<style>
+    table{
+        margin: initial;
+    }
+</style>
 <center><font size="64px">礼包兑换API接口</font></center>
 
 
