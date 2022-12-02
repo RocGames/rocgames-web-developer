@@ -67,15 +67,15 @@
 - 待签名数据
 ```json
     {
-        "role_id":"角色ID",
-        "role_server":"游戏区服",
+        "roleId":"角色ID",
+        "roleServer":"游戏区服",
         "prop":[
                     {
                       "name":"道具名称",
                       "num":"1"
                     }
                 ],
-      "order_id":"订单ID",
+      "orderId":"订单ID",
       "channel":"渠道",
       "extra":"扩展信息",
       "sign":"签名"
@@ -83,7 +83,7 @@
 ```
 
 - 拼装成待验签的字符串如下
-> $string = 'channel=渠道&exOrderId=订单ID&extra=扩展信息&prop=[{"name":"道具名称","num":"1"}]&roleId=角色ID&roleServer=游戏区服&sign=签名&key=4b275ac216d7d8385206c9766485db6f';
+> $string = 'channel=渠道&orderId=订单ID&extra=扩展信息&prop=[{"name":"道具名称","num":"1"}]&roleId=角色ID&roleServer=游戏区服&sign=签名&key=4b275ac216d7d8385206c9766485db6f';
 - md5签名
 > $sign = md5($string);
 
