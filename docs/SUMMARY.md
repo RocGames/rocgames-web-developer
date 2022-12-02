@@ -87,6 +87,7 @@
 ### 常见问题
 
 * [接入问题](faq/faq.md)
+	* [Android](faq/faq-and.md)
 * [使用问题](faq/faq-ios.md)
 * [广告相关问题](faq/faq-and.md)
 
