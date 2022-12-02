@@ -21,7 +21,6 @@ Table：azura_game
 | id        | int(10)     | ID   |                 |
 | gameName  | string(32)  | 游戏名称 |                 |
 | gameNo    | string(16)  | 游戏编号 |                 |
-| gameNo    | string(16)  | 游戏编号 |                 |
 | createdAt | int(10)     | 创建时间 |                 |
 | updatedAt | int(10)     | 更新时间 |                 |
 | deletedAt | int(10)     | 删除时间 |                 |
