@@ -14,6 +14,7 @@
       * [运营综合检查项](started/operation/check-items.md)
       * [运营组工作节点](started/operation/work-node.md)
       * [运营工作概览](started/operation/operation.md)
+      * [投放SOP](started/operation/market-sop.md)
 * [隐私政策](started/agreement.md)
 * [隐私权限语言国际化对照表](started/access-privacy-table.md)
 
