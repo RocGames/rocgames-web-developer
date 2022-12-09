@@ -62,9 +62,9 @@ actionType|	String|	活动页类型
 
 | 参数      |  类型  | 说明                         |
 | :-------- | :----: | :------------------------- |
-| uid       | 字符串 | 登陆成功时返回的UID            |
-| serverid  | 字符串 | 游戏区服ID 没有就传字符串"1" |
-| playerid  | 字符串 | 游戏内角色ID          			|
+| uid       | String | 登陆成功时返回的UID            |
+| serverid  | String | 游戏区服ID 没有就传字符串"1" |
+| playerid  | String | 游戏内角色ID          			|
 ####a.示例代码####
 ```java
     MyExternalInterface.getInstance().SDKPreRate(this, new SDKInterfaceInitListener() {
@@ -86,12 +86,17 @@ actionType|	String|	活动页类型
         MyExternalInterface.getInstance().SDKGoogleRate(this, params);
 ```
 ##3.悬浮窗功能##
+> *通常进入到游戏后调用*
 
-1.开启悬浮窗
+###1.开启悬浮窗###
 	
 	public void SDKShowFloat(Activity activity, WebInfo webInfo, SDKFloatListener listener)
 		webInfo ：链接对象，目前只有link，表示要跳转的链接
 		listener：点击了客服按钮
+
+| 参数  |  类型  | 说明                  |
+| :----| :----: | :--------------------|
+| link | String  | 跳转地址  我们运营提供   |
 
 ####a.示例代码####
 ```java
@@ -106,7 +111,28 @@ actionType|	String|	活动页类型
 	}
 ```
 
-2.关闭悬浮窗
+###2.玩家游戏数据交互接口###
+> *通常进入到游戏后调用*
+
+	 public void SDKAIHelperUpData(Context context,String userJson) 
+
+接口参数Json串 userJson 字段说明:
+
+| 参数       |  类型    | 说明                               |
+| :----------| :----: | :----------------------------------|
+| uid        | String  | 登陆成功时返回的UID                   |
+| playerid   | String  | 游戏角色ID                           |
+| playerName | String  | 游戏角色名  (没有就传空符串@""）        |
+| pay_total  | String  | 玩家累充金额 (未充值传@"0") (⚠️传 美金) |
+| serverid   | String  | 游戏区服ID  (没有就传字符串@"1"        |
+| level      | String  | 游戏角色等级 (没有就传空符串@""）       |
+
+####a.示例代码####
+```java
+MyExternalInterface.getInstance().SDKAIHelperUpData(MainActivity.this,userJson);
+```
+
+###3.关闭悬浮窗###
 
     public void SDKFloatClose(Activity activity, WebInfo webInfo)
 		webInfo ：链接对象，可传null

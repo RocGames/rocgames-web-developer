@@ -88,7 +88,7 @@ apply plugin: 'com.google.firebase.crashlytics'
 <img src="../images/Android_3.png" width = "500" height = "150" alt="Android_3" align=center />
 
 ```gradle
-implementation 'com.myLegend.secondsdk:mySecondSdkaar:2.5.2'
+implementation 'com.myLegend.secondsdk:mySecondSdkaar:2.5.4'
 
 ```
 
@@ -295,6 +295,23 @@ configurations {
 <meta-data
     android:name="Google_SingIn_Key"
     android:value="@string/google_singin_key"></meta-data>
+
+<!--AIHelper sdk  可选配置，不需要可以不加-->
+        <meta-data
+            android:name="AIHelper_APPKEY"
+            android:value="xxxxx" />
+        <meta-data
+            android:name="AIHelper_DOMAIN"
+            android:value="xxxxx" />
+        <meta-data
+            android:name="AIHelper_APPID"
+            android:value="xxxxx" />
+        <meta-data
+            android:name="AIHelper_ENTRANCEID"
+            android:value="xxxxx" />
+		<meta-data
+            android:name="AIHelper_ISOPEN"
+            android:value="false" />
 <!--sdk 配置end-->
 
 ```
