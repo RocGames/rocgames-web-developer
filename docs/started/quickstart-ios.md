@@ -156,6 +156,7 @@ target '⚠️#工程主target#⚠️' do
    pod 'FirebaseMessaging'
    pod 'YYModel', '~> 1.0.4'
    pod 'Adjust', '~> 4.32.0'
+   pod 'AIHelpSDK', '~> 4.1.7'
    
 end
 ```

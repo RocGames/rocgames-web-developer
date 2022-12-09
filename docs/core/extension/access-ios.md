@@ -39,6 +39,7 @@
 ```
 
 ## 2. Yeeha官网跳转悬浮窗
+### 2.1 悬浮窗展示接口
 
 > *通常进入到游戏后调用*
 
@@ -56,6 +57,38 @@
 
 ```objectivec
 [ROCSdkManager showFloatingView:@{@"link":@"https://www.baidu.com"];
+
+```
+
+### 2.2 玩家游戏数据交互接口
+
+> *通常进入到游戏后调用*
+
+接口参数对象 **dic** 包含字段说明:
+
+| 参数       |  类型    | 说明                               |
+| :----------| :----: | :----------------------------------|
+| uid        | 字符串  | 登陆成功时返回的UID                   |
+| playerid   | 字符串  | 游戏角色ID                           |
+| playerName | 字符串  | 游戏角色名  (没有就传空符串@""）        |
+| pay_total  | 字符串  | 玩家累充金额 (未充值传@"0") (⚠️传 美金) |
+| serverid   | 字符串  | 游戏区服ID  (没有就传字符串@"1"        |
+| level      | 字符串  | 游戏角色等级 (没有就传空符串@""）       |
+
+```objectivec
++ (void)updatePlayerInfo:(NSDictionary *)dic;
+```
+
+调用示例如下:
+
+```objectivec
+[ROCSdkManager updatePlayerInfo:@{@"uid":@"001",
+                                  @"playerid":@"1000000",
+                                  @"playerName":@"龙傲天",
+                                  @"pay_total":@"6.99",
+                                  @"serverid":@"1",
+                                  @"level":@"18",
+                                  }];
 
 ```
 
