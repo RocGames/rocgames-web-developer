@@ -60,8 +60,8 @@ SDK支持多种登录方式
 | 参数   | 类型 |     说明 |
 | :-- | :---: | :-- |
 | username | 字符串 | 账号username |
-| uid | 字符串 | 账号uid |
-| subId | 字符串 | Yeeha平台子账号ID ⚠️请用该ID和游戏数据做关联对应|
+| uid | 字符串 | 账号uid   ⚠️请用该ID和游戏数据做关联对应 |
+| subId | 字符串 | Yeeha平台子账号ID |
 | mainId | 字符串 | Yeeha平台ID |
 | gameSign | 字符串 | 登录验证用 |
 | loginTime | 字符串 | 登录验证用 |
