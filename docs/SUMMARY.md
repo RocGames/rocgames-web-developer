@@ -14,7 +14,12 @@
       * [运营综合检查项](started/operation/check-items.md)
       * [运营组工作节点](started/operation/work-node.md)
       * [运营工作概览](started/operation/operation.md)
-      * [投放SOP](started/operation/market-sop.md)
+      * 投放SOP
+        * [投放SOP一（主流程部分）](started/operation/market-currency-sop.md)
+        * [投放SOP二（FB部分）](started/operation/market-FB-sop.md)
+        * [投放SOP三（GAD部分）](started/operation/market-GAD-sop.md)
+        * [投放SOP四（NCPI部分）](started/operation/market-NCPI-sop.md)
+        * [投放SOP五（LINE部分）](started/operation/market-LINE-sop.md)
 * [隐私政策](started/agreement.md)
 * [隐私权限语言国际化对照表](started/access-privacy-table.md)
 
