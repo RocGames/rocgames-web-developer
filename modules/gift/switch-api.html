@@ -1318,6 +1318,57 @@
             
         </li>
     
+        <li class="chapter " data-level="3.9" >
+            
+                <span>
+            
+                    
+                    SDK功能接口
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.9.1" >
+            
+                <span>
+            
+                    
+                    功能接入
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.9.1.1" data-path="../platform/firebase-api.html">
+            
+                <a href="../platform/firebase-api.html">
+            
+                    
+                    API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
         
@@ -1518,7 +1569,7 @@
 <tbody>
 <tr>
 <td>URL</td>
-<td></td>
+<td><a href="http://m-uat.roc.games/api" target="_blank">http://m-uat.roc.games/api</a></td>
 <td>&#x6D4B;&#x8BD5;&#x73AF;&#x5883;</td>
 </tr>
 <tr>
@@ -1531,9 +1582,9 @@
 <h3 id="22-&#x63A5;&#x53E3;&#x54CD;&#x5E94;&#x8BF4;&#x660E;"><a name="22-&#x63A5;&#x53E3;&#x54CD;&#x5E94;&#x8BF4;&#x660E;" class="anchor-navigation-ex-anchor" href="#22-&#x63A5;&#x53E3;&#x54CD;&#x5E94;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2 &#x63A5;&#x53E3;&#x54CD;&#x5E94;&#x8BF4;&#x660E;</h3>
 <h4 id="221-&#x6210;&#x529F;"><a name="221-&#x6210;&#x529F;" class="anchor-navigation-ex-anchor" href="#221-&#x6210;&#x529F;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2.1 &#x6210;&#x529F;</h4>
 <pre><code class="lang-json">{
-    &quot;status&quot;:true,
-    &quot;code&quot;:200,
-    &quot;msg&quot;:&quot;SUCCESS&quot;,
+    &quot;success&quot;: true,
+    &quot;errCode&quot;: 0,
+    &quot;errMsg&quot;: &quot;SUCCESS&quot;,
     &quot;data&quot;:[
         {
             # &#x66F4;&#x591A;&#x53C2;&#x6570;&#x8BF7;&#x67E5;&#x9605;&#x76F8;&#x5173;&#x63A5;&#x53E3;
@@ -1543,9 +1594,10 @@
 </code></pre>
 <h4 id="222-&#x5931;&#x8D25;"><a name="222-&#x5931;&#x8D25;" class="anchor-navigation-ex-anchor" href="#222-&#x5931;&#x8D25;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2.2 &#x5931;&#x8D25;</h4>
 <pre><code class="lang-json">{
-    <span class="hljs-string">&quot;status&quot;</span>:<span class="hljs-literal">false</span>,
-    <span class="hljs-string">&quot;code&quot;</span>:<span class="hljs-string">&quot;-110110&quot;</span>,
-    <span class="hljs-string">&quot;msg&quot;</span>:<span class="hljs-string">&quot;ERROR&quot;</span>,
+    <span class="hljs-string">&quot;success&quot;</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-string">&quot;data&quot;</span>: {},
+    <span class="hljs-string">&quot;errCode&quot;</span>: <span class="hljs-string">&quot;-100001&quot;</span>,
+    <span class="hljs-string">&quot;errMsg&quot;</span>: <span class="hljs-string">&quot;Validation errors&quot;</span>
 }
 </code></pre>
 <h3 id="23-&#x7B7E;&#x540D;&#x673A;&#x5236;"><a name="23-&#x7B7E;&#x540D;&#x673A;&#x5236;" class="anchor-navigation-ex-anchor" href="#23-&#x7B7E;&#x540D;&#x673A;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3 &#x7B7E;&#x540D;&#x673A;&#x5236;</h3>
@@ -1568,13 +1620,8 @@
 <tbody>
 <tr>
 <td>signKey</td>
-<td>4b275ac216d7d8385206c9766485db6f</td>
-<td>&#x6D4B;&#x8BD5;&#x73AF;&#x5883;</td>
-</tr>
-<tr>
-<td>signKey</td>
 <td></td>
-<td>&#x751F;&#x6210;&#x73AF;&#x5883;</td>
+<td>&#x7B7E;&#x540D; signKey</td>
 </tr>
 </tbody>
 </table>
@@ -1582,15 +1629,15 @@
 <ul>
 <li><p>&#x5F85;&#x7B7E;&#x540D;&#x6570;&#x636E;</p>
 <pre><code class="lang-json">  {
-      <span class="hljs-string">&quot;roleId&quot;</span>:<span class="hljs-string">&quot;&#x89D2;&#x8272;ID&quot;</span>,
-      <span class="hljs-string">&quot;roleServer&quot;</span>:<span class="hljs-string">&quot;&#x6E38;&#x620F;&#x533A;&#x670D;&quot;</span>,
+      <span class="hljs-string">&quot;role_id&quot;</span>:<span class="hljs-string">&quot;&#x89D2;&#x8272;ID&quot;</span>,
+      <span class="hljs-string">&quot;role_server&quot;</span>:<span class="hljs-string">&quot;&#x6E38;&#x620F;&#x533A;&#x670D;&quot;</span>,
       <span class="hljs-string">&quot;prop&quot;</span>:[
                   {
                     <span class="hljs-string">&quot;name&quot;</span>:<span class="hljs-string">&quot;&#x9053;&#x5177;&#x540D;&#x79F0;&quot;</span>,
                     <span class="hljs-string">&quot;num&quot;</span>:<span class="hljs-string">&quot;1&quot;</span>
                   }
               ],
-    <span class="hljs-string">&quot;orderId&quot;</span>:<span class="hljs-string">&quot;&#x8BA2;&#x5355;ID&quot;</span>,
+    <span class="hljs-string">&quot;order_id&quot;</span>:<span class="hljs-string">&quot;&#x8BA2;&#x5355;ID&quot;</span>,
     <span class="hljs-string">&quot;channel&quot;</span>:<span class="hljs-string">&quot;&#x6E20;&#x9053;&quot;</span>,
     <span class="hljs-string">&quot;extra&quot;</span>:<span class="hljs-string">&quot;&#x6269;&#x5C55;&#x4FE1;&#x606F;&quot;</span>,
     <span class="hljs-string">&quot;sign&quot;</span>:<span class="hljs-string">&quot;&#x7B7E;&#x540D;&quot;</span>
@@ -1599,7 +1646,7 @@
 </li>
 <li><p>&#x62FC;&#x88C5;&#x6210;&#x5F85;&#x9A8C;&#x7B7E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5982;&#x4E0B;</p>
 <blockquote>
-<p>$string = &apos;channel=&#x6E20;&#x9053;&amp;orderId=&#x8BA2;&#x5355;ID&amp;extra=&#x6269;&#x5C55;&#x4FE1;&#x606F;&amp;prop=[{&quot;name&quot;:&quot;&#x9053;&#x5177;&#x540D;&#x79F0;&quot;,&quot;num&quot;:&quot;1&quot;}]&amp;roleId=&#x89D2;&#x8272;ID&amp;roleServer=&#x6E38;&#x620F;&#x533A;&#x670D;&amp;sign=&#x7B7E;&#x540D;&amp;key=4b275ac216d7d8385206c9766485db6f&apos;;</p>
+<p>$string = &apos;channel=&#x6E20;&#x9053;&amp;exOrderId=&#x8BA2;&#x5355;ID&amp;extra=&#x6269;&#x5C55;&#x4FE1;&#x606F;&amp;prop=[{&quot;name&quot;:&quot;&#x9053;&#x5177;&#x540D;&#x79F0;&quot;,&quot;num&quot;:&quot;1&quot;}]&amp;roleId=&#x89D2;&#x8272;ID&amp;roleServer=&#x6E38;&#x620F;&#x533A;&#x670D;&amp;key=4b275ac216d7d8385206c9766485db6f&apos;;</p>
 </blockquote>
 </li>
 <li>md5&#x7B7E;&#x540D;<blockquote>
@@ -1607,19 +1654,20 @@
 </blockquote>
 </li>
 </ul>
-<h2 id="&#x4E09;&#x3001;&#x5BA2;&#x6237;&#x7AEF;sdk-&#x5151;&#x6362;&#x793C;&#x5305;"><a name="&#x4E09;&#x3001;&#x5BA2;&#x6237;&#x7AEF;sdk-&#x5151;&#x6362;&#x793C;&#x5305;" class="anchor-navigation-ex-anchor" href="#&#x4E09;&#x3001;&#x5BA2;&#x6237;&#x7AEF;sdk-&#x5151;&#x6362;&#x793C;&#x5305;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E09;&#x3001;&#x5BA2;&#x6237;&#x7AEF;SDK-&#x5151;&#x6362;&#x793C;&#x5305;</h2>
+<h2 id="&#x4E09;&#x3001;&#x4F7F;&#x7528;&#x793C;&#x5305;&#x7801;"><a name="&#x4E09;&#x3001;&#x4F7F;&#x7528;&#x793C;&#x5305;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x4E09;&#x3001;&#x4F7F;&#x7528;&#x793C;&#x5305;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E09;&#x3001;&#x4F7F;&#x7528;&#x793C;&#x5305;&#x7801;</h2>
 <h3 id="31-&#x8BF7;&#x6C42;&#x5730;&#x5740;"><a name="31-&#x8BF7;&#x6C42;&#x5730;&#x5740;" class="anchor-navigation-ex-anchor" href="#31-&#x8BF7;&#x6C42;&#x5730;&#x5740;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1 &#x8BF7;&#x6C42;&#x5730;&#x5740;</h3>
 <blockquote>
-<p>URL&#xFF1A;</p>
+<p>URL&#xFF1A;/gift/codeUse</p>
 </blockquote>
 <h3 id="32-&#x8BF7;&#x6C42;&#x53C2;&#x6570;"><a name="32-&#x8BF7;&#x6C42;&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#32-&#x8BF7;&#x6C42;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2 &#x8BF7;&#x6C42;&#x53C2;&#x6570;</h3>
 <table>
 <thead>
 <tr>
-<th>name</th>
-<th>type</th>
-<th>required</th>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
 <th>&#x8BF4;&#x660E;</th>
+<th>&#x7B7E;&#x540D;</th>
 </tr>
 </thead>
 <tbody>
@@ -1627,126 +1675,204 @@
 <td>gameNo</td>
 <td>int</td>
 <td>&#x662F;</td>
-<td>&#x6E38;&#x620F;id</td>
+<td>&#x6E38;&#x620F;&#x7F16;&#x53F7;</td>
+<td>Y</td>
 </tr>
 <tr>
 <td>exCode</td>
 <td>string</td>
 <td>&#x662F;</td>
-<td>&#x5151;&#x6362;&#x7801;</td>
+<td>&#x793C;&#x5305;&#x7801;</td>
+<td>Y</td>
 </tr>
 <tr>
 <td>roleId</td>
 <td>int</td>
 <td>&#x662F;</td>
 <td>&#x89D2;&#x8272;ID</td>
+<td>Y</td>
 </tr>
 <tr>
 <td>roleServer</td>
 <td>int</td>
 <td>&#x662F;</td>
 <td>&#x89D2;&#x8272;&#x533A;&#x670D;ID</td>
-</tr>
-<tr>
-<td>roleNick</td>
-<td>string</td>
-<td>&#x662F;</td>
-<td>&#x89D2;&#x8272;&#x6635;&#x79F0;</td>
+<td>Y</td>
 </tr>
 <tr>
 <td>roleGrade</td>
 <td>int</td>
 <td>&#x662F;</td>
 <td>&#x89D2;&#x8272;&#x7B49;&#x7EA7;</td>
-</tr>
-</tbody>
-</table>
-<h3 id="33-&#x8BF7;&#x6C42;&#x793A;&#x4F8B;"><a name="33-&#x8BF7;&#x6C42;&#x793A;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#33-&#x8BF7;&#x6C42;&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3 &#x8BF7;&#x6C42;&#x793A;&#x4F8B;</h3>
-<pre><code class="lang-json">    {
-      <span class="hljs-string">&quot;gameNo&quot;</span>:<span class="hljs-string">&quot;&#x6E38;&#x620F;&#x7F16;&#x53F7;&quot;</span>,
-      <span class="hljs-string">&quot;exCode&quot;</span>:<span class="hljs-string">&quot;&#x5151;&#x6362;&#x7801;&quot;</span>,
-      <span class="hljs-string">&quot;roleId&quot;</span>:<span class="hljs-string">&quot;&#x89D2;&#x8272;ID&quot;</span>,
-      <span class="hljs-string">&quot;roleServer&quot;</span>:<span class="hljs-string">&quot;&#x5151;&#x6362;&#x533A;&#x670D;ID&quot;</span>,
-      <span class="hljs-string">&quot;roleNick&quot;</span>:<span class="hljs-string">&quot;&#x89D2;&#x8272;&#x6635;&#x79F0;&quot;</span>,
-      <span class="hljs-string">&quot;roleGrade&quot;</span>:<span class="hljs-string">&quot;&#x89D2;&#x8272;&#x7B49;&#x7EA7;&quot;</span>,
-    }
-</code></pre>
-<h2 id="&#x56DB;&#x3001;&#x6E38;&#x620F;&#x7AEF;-&#x5151;&#x6362;&#x793C;&#x5305;"><a name="&#x56DB;&#x3001;&#x6E38;&#x620F;&#x7AEF;-&#x5151;&#x6362;&#x793C;&#x5305;" class="anchor-navigation-ex-anchor" href="#&#x56DB;&#x3001;&#x6E38;&#x620F;&#x7AEF;-&#x5151;&#x6362;&#x793C;&#x5305;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56DB;&#x3001;&#x6E38;&#x620F;&#x7AEF;-&#x5151;&#x6362;&#x793C;&#x5305;</h2>
-<h3 id="41-&#x8BF7;&#x6C42;&#x5730;&#x5740;"><a name="41-&#x8BF7;&#x6C42;&#x5730;&#x5740;" class="anchor-navigation-ex-anchor" href="#41-&#x8BF7;&#x6C42;&#x5730;&#x5740;"><i class="fa fa-link" aria-hidden="true"></i></a>4.1 &#x8BF7;&#x6C42;&#x5730;&#x5740;</h3>
-<blockquote>
-<p>URL&#xFF1A;&#x6E38;&#x620F;&#x63D0;&#x4F9B;&#x5151;&#x6362;&#x793C;&#x5305;&#x63A5;&#x53E3;</p>
-</blockquote>
-<h3 id="42-&#x8BF7;&#x6C42;&#x53C2;&#x6570;"><a name="42-&#x8BF7;&#x6C42;&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#42-&#x8BF7;&#x6C42;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2 &#x8BF7;&#x6C42;&#x53C2;&#x6570;</h3>
-<table>
-<thead>
-<tr>
-<th>uid</th>
-<th>int</th>
-<th>required</th>
-<th>&#x7528;&#x6237;ID</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>roleId</td>
-<td>int</td>
-<td>&#x662F;</td>
-<td>&#x89D2;&#x8272;ID</td>
-</tr>
-<tr>
-<td>roleServer</td>
-<td>int</td>
-<td>&#x662F;</td>
-<td>&#x89D2;&#x8272;&#x533A;&#x670D;ID</td>
-</tr>
-<tr>
-<td>prop</td>
-<td></td>
-<td>&#x662F;</td>
-<td>&#x793C;&#x5305;</td>
-</tr>
-<tr>
-<td>prop.name</td>
-<td>string</td>
-<td>&#x662F;</td>
-<td>&#x9053;&#x5177;&#x540D;&#x79F0;</td>
-</tr>
-<tr>
-<td>prop.num</td>
-<td>int</td>
-<td>&#x662F;</td>
-<td>&#x6570;&#x91CF;</td>
-</tr>
-<tr>
-<td>exOrderNo</td>
-<td>string</td>
-<td>&#x662F;</td>
-<td>&#x5151;&#x6362;&#x8BA2;&#x5355;&#x7F16;&#x53F7;</td>
-</tr>
-<tr>
-<td>channel</td>
-<td>string</td>
-<td>&#x662F;</td>
-<td>&#x6E20;&#x9053;</td>
-</tr>
-<tr>
-<td>extra</td>
-<td>string</td>
-<td>&#x662F;</td>
-<td>&#x6269;&#x5C55;&#x4FE1;&#x606F;</td>
+<td>Y</td>
 </tr>
 <tr>
 <td>sign</td>
 <td>string</td>
 <td>&#x662F;</td>
 <td>&#x7B7E;&#x540D;</td>
+<td>N</td>
 </tr>
 </tbody>
 </table>
-<h3 id="43-&#x8BF7;&#x6C42;&#x793A;&#x4F8B;"><a name="43-&#x8BF7;&#x6C42;&#x793A;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#43-&#x8BF7;&#x6C42;&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>4.3 &#x8BF7;&#x6C42;&#x793A;&#x4F8B;</h3>
+<h3 id="33-&#x8BF7;&#x6C42;&#x793A;&#x4F8B;"><a name="33-&#x8BF7;&#x6C42;&#x793A;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#33-&#x8BF7;&#x6C42;&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3 &#x8BF7;&#x6C42;&#x793A;&#x4F8B;</h3>
 <pre><code class="lang-json">    {
+      <span class="hljs-string">&quot;gameNo&quot;</span>:<span class="hljs-string">&quot;1015&quot;</span>,
+      <span class="hljs-string">&quot;exCode&quot;</span>:<span class="hljs-string">&quot;CXPIYFLW&quot;</span>,
       <span class="hljs-string">&quot;roleId&quot;</span>:<span class="hljs-string">&quot;&#x89D2;&#x8272;ID&quot;</span>,
-      <span class="hljs-string">&quot;roleServer&quot;</span>:<span class="hljs-string">&quot;&#x6E38;&#x620F;&#x533A;&#x670D;&quot;</span>,
+      <span class="hljs-string">&quot;roleServer&quot;</span>:<span class="hljs-string">&quot;&#x5151;&#x6362;&#x533A;&#x670D;ID&quot;</span>,
+      <span class="hljs-string">&quot;roleGrade&quot;</span>:<span class="hljs-string">&quot;&#x89D2;&#x8272;&#x7B49;&#x7EA7;&quot;</span>,
+      <span class="hljs-string">&quot;sign&quot;</span>:<span class="hljs-string">&quot;4297f44b13955235245b2497399d7a93&quot;</span>
+    }
+</code></pre>
+<h2 id="&#x56DB;&#x3001;&#x67E5;&#x8BE2;&#x793C;&#x5305;&#x7801;"><a name="&#x56DB;&#x3001;&#x67E5;&#x8BE2;&#x793C;&#x5305;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x56DB;&#x3001;&#x67E5;&#x8BE2;&#x793C;&#x5305;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56DB;&#x3001;&#x67E5;&#x8BE2;&#x793C;&#x5305;&#x7801;</h2>
+<h3 id="41-&#x8BF7;&#x6C42;&#x5730;&#x5740;"><a name="41-&#x8BF7;&#x6C42;&#x5730;&#x5740;" class="anchor-navigation-ex-anchor" href="#41-&#x8BF7;&#x6C42;&#x5730;&#x5740;"><i class="fa fa-link" aria-hidden="true"></i></a>4.1 &#x8BF7;&#x6C42;&#x5730;&#x5740;</h3>
+<blockquote>
+<p>URL&#xFF1A;/gift/codeQuery</p>
+</blockquote>
+<h3 id="42-&#x8BF7;&#x6C42;&#x53C2;&#x6570;"><a name="42-&#x8BF7;&#x6C42;&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#42-&#x8BF7;&#x6C42;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2 &#x8BF7;&#x6C42;&#x53C2;&#x6570;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x7B7E;&#x540D;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gameNo</td>
+<td>int</td>
+<td>&#x662F;</td>
+<td>&#x6E38;&#x620F;&#x7F16;&#x53F7;</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>exCodeMulti</td>
+<td>string</td>
+<td>&#x662F;</td>
+<td>&#x793C;&#x5305;&#x7801;&#xFF0C;&#x591A;&#x4E2A;&#x7801;&#x4F7F;&#x7528;&#x3010;,&#x3011;&#x5206;&#x5272;&#xFF0C;&#x6570;&#x91CF; &lt;= 10</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>string</td>
+<td>&#x662F;</td>
+<td>&#x7B7E;&#x540D;</td>
+<td>N</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-&#x8BF7;&#x6C42;&#x793A;&#x4F8B;_1"><a name="33-&#x8BF7;&#x6C42;&#x793A;&#x4F8B;_1" class="anchor-navigation-ex-anchor" href="#33-&#x8BF7;&#x6C42;&#x793A;&#x4F8B;_1"><i class="fa fa-link" aria-hidden="true"></i></a>3.3 &#x8BF7;&#x6C42;&#x793A;&#x4F8B;</h3>
+<pre><code class="lang-json">    {
+      <span class="hljs-string">&quot;gameNo&quot;</span>:<span class="hljs-string">&quot;1015&quot;</span>,
+      <span class="hljs-string">&quot;exCodeMulti&quot;</span>:<span class="hljs-string">&quot;CXPIYFLW,MO2F66U2&quot;</span>,
+      <span class="hljs-string">&quot;sign&quot;</span>:<span class="hljs-string">&quot;4297f44b13955235245b2497399d7a93&quot;</span>
+    }
+</code></pre>
+<h2 id="&#x4E94;&#x3001;&#x793C;&#x5305;&#x53D1;&#x8D27;"><a name="&#x4E94;&#x3001;&#x793C;&#x5305;&#x53D1;&#x8D27;" class="anchor-navigation-ex-anchor" href="#&#x4E94;&#x3001;&#x793C;&#x5305;&#x53D1;&#x8D27;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E94;&#x3001;&#x793C;&#x5305;&#x53D1;&#x8D27;</h2>
+<h3 id="51-&#x8BF7;&#x6C42;&#x5730;&#x5740;"><a name="51-&#x8BF7;&#x6C42;&#x5730;&#x5740;" class="anchor-navigation-ex-anchor" href="#51-&#x8BF7;&#x6C42;&#x5730;&#x5740;"><i class="fa fa-link" aria-hidden="true"></i></a>5.1 &#x8BF7;&#x6C42;&#x5730;&#x5740;</h3>
+<blockquote>
+<p>URL&#xFF1A;&#x6E38;&#x620F;&#x63D0;&#x4F9B;&#x9053;&#x5177;&#x53D1;&#x8D27;&#x63A5;&#x53E3;</p>
+</blockquote>
+<h3 id="52-&#x8BF7;&#x6C42;&#x53C2;&#x6570;"><a name="52-&#x8BF7;&#x6C42;&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#52-&#x8BF7;&#x6C42;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>5.2 &#x8BF7;&#x6C42;&#x53C2;&#x6570;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x586B;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x7B7E;&#x540D;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gameNo</td>
+<td>int</td>
+<td>&#x662F;</td>
+<td>&#x6E38;&#x620F;&#x7F16;&#x53F7;</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>roleId</td>
+<td>int</td>
+<td>&#x662F;</td>
+<td>&#x89D2;&#x8272;ID</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>roleServer</td>
+<td>int</td>
+<td>&#x662F;</td>
+<td>&#x89D2;&#x8272;&#x533A;&#x670D;ID</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>prop</td>
+<td></td>
+<td>&#x662F;</td>
+<td>&#x793C;&#x5305;</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>prop.name</td>
+<td>string</td>
+<td>&#x662F;</td>
+<td>&#x9053;&#x5177;&#x540D;&#x79F0;</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>prop.num</td>
+<td>int</td>
+<td>&#x662F;</td>
+<td>&#x6570;&#x91CF;</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>exOrderNo</td>
+<td>string</td>
+<td>&#x662F;</td>
+<td>&#x5151;&#x6362;&#x8BA2;&#x5355;&#x7F16;&#x53F7;</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>exCode</td>
+<td>string</td>
+<td>&#x662F;</td>
+<td>&#x793C;&#x5305;&#x7801;</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>channel</td>
+<td>string</td>
+<td>&#x662F;</td>
+<td>&#x6E20;&#x9053;&#xFF1A;rocgame</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>extra</td>
+<td>string</td>
+<td>&#x5426;</td>
+<td>&#x6269;&#x5C55;&#x4FE1;&#x606F;</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>string</td>
+<td>&#x662F;</td>
+<td>&#x7B7E;&#x540D;</td>
+<td>N</td>
+</tr>
+</tbody>
+</table>
+<h3 id="53-&#x8BF7;&#x6C42;&#x793A;&#x4F8B;"><a name="53-&#x8BF7;&#x6C42;&#x793A;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#53-&#x8BF7;&#x6C42;&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>5.3 &#x8BF7;&#x6C42;&#x793A;&#x4F8B;</h3>
+<pre><code class="lang-json">    {
+      <span class="hljs-string">&quot;gameNo&quot;</span>:<span class="hljs-string">&quot;1015&quot;</span>,
+      <span class="hljs-string">&quot;roleId&quot;</span>:<span class="hljs-string">&quot;&#x89D2;&#x8272;ID&quot;</span>,
+      <span class="hljs-string">&quot;roleServer&quot;</span>:<span class="hljs-string">&quot;&#x89D2;&#x8272;&#x533A;&#x670D;ID&quot;</span>,
       <span class="hljs-string">&quot;prop&quot;</span>:[
         {
           <span class="hljs-string">&quot;name&quot;</span>:<span class="hljs-string">&quot;&#x9053;&#x5177;&#x540D;&#x79F0;&quot;</span>,
@@ -1757,13 +1883,14 @@
           <span class="hljs-string">&quot;num&quot;</span>:<span class="hljs-string">&quot;1&quot;</span>
         }
       ],
-      <span class="hljs-string">&quot;exOrderId&quot;</span>:<span class="hljs-string">&quot;&#x8BA2;&#x5355;ID&quot;</span>,
-      <span class="hljs-string">&quot;channel&quot;</span>:<span class="hljs-string">&quot;&#x6E20;&#x9053;&quot;</span>,
+      <span class="hljs-string">&quot;exOrderId&quot;</span>:<span class="hljs-string">&quot;&#x5151;&#x6362;&#x8BA2;&#x5355;&#x7F16;&#x53F7;&quot;</span>,
+      <span class="hljs-string">&quot;exCode&quot;</span>:<span class="hljs-string">&quot;&#x793C;&#x5305;&#x7801;&quot;</span>,
+      <span class="hljs-string">&quot;channel&quot;</span>:<span class="hljs-string">&quot;rocgame&quot;</span>,
       <span class="hljs-string">&quot;extra&quot;</span>:<span class="hljs-string">&quot;&#x6269;&#x5C55;&#x4FE1;&#x606F;&quot;</span>,
       <span class="hljs-string">&quot;sign&quot;</span>:<span class="hljs-string">&quot;&#x7B7E;&#x540D;&quot;</span>
 }
 </code></pre>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright">  Copyright &#xA9; <a href="http://roc.games" target="_blank">ROC Games</a> 2022  </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2023-02-06 14:44:24 </span> </footer>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright">  Copyright &#xA9; <a href="http://roc.games" target="_blank">ROC Games</a> 2022  </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2023-02-07 10:35:04 </span> </footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
                                 </section>
@@ -1797,7 +1924,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"API","level":"3.1.2.1","depth":3,"next":{"title":"最佳实践","level":"3.1.3","depth":2,"path":"modules/gift/best-practice.md","ref":"modules/gift/best-practice.md","articles":[]},"previous":{"title":"功能接入","level":"3.1.2","depth":2,"ref":"","articles":[{"title":"API","level":"3.1.2.1","depth":3,"path":"modules/gift/switch-api.md","ref":"modules/gift/switch-api.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","ga","code","chapter-fold","expandable-chapters","expandable-chapters-small","edit-link","search-pro","ancre-navigation","splitter","flexible-alerts","auto-scroll-table","popup","theme-api","page-footer-ex"],"root":"./docs","styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"page-footer-ex":{"copyright":" Copyright © [ROC Games](http://roc.games) 2022 ","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"splitter":{},"search-pro":{},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-api":{"languages":[],"split":true,"theme":"dark"},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"ga":{"configuration":"auto","token":"UA-44087823-2"},"edit-link":{"label":"编辑本页","base":"https://github.com/RocGames/developer-docs-portal/edit/main/docs"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Mob","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Docs Protal","language":"zh-hans","gitbook":"3.2.3","description":"文档中心"},"file":{"path":"modules/gift/switch-api.md","mtime":"2023-02-06T06:44:24.706Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-02-06T06:45:31.152Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"API","level":"3.1.2.1","depth":3,"next":{"title":"最佳实践","level":"3.1.3","depth":2,"path":"modules/gift/best-practice.md","ref":"modules/gift/best-practice.md","articles":[]},"previous":{"title":"功能接入","level":"3.1.2","depth":2,"ref":"","articles":[{"title":"API","level":"3.1.2.1","depth":3,"path":"modules/gift/switch-api.md","ref":"modules/gift/switch-api.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","ga","code","chapter-fold","expandable-chapters","expandable-chapters-small","edit-link","search-pro","ancre-navigation","splitter","flexible-alerts","auto-scroll-table","popup","theme-api","page-footer-ex"],"root":"./docs","styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"page-footer-ex":{"copyright":" Copyright © [ROC Games](http://roc.games) 2022 ","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"splitter":{},"search-pro":{},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-api":{"languages":[],"split":true,"theme":"dark"},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"ga":{"configuration":"auto","token":"UA-44087823-2"},"edit-link":{"label":"编辑本页","base":"https://github.com/RocGames/developer-docs-portal/edit/main/docs"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Mob","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Docs Protal","language":"zh-hans","gitbook":"3.2.3","description":"文档中心"},"file":{"path":"modules/gift/switch-api.md","mtime":"2023-02-07T02:35:04.279Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-02-07T02:36:01.195Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
