@@ -89,6 +89,9 @@
 * [即时通信](modules/other/4.md)
 * [推送通知](modules/other/5.md)
 * [数据存储](modules/other/6.md)
+* SDK功能接口
+    * 功能接入
+        * [API](modules/platform/firebase-api.md)
 
 ### 常见问题
 
