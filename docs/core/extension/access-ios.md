@@ -255,24 +255,24 @@ BOOL isShowAct = [ROCSdkManager isShowAct:@{@"serverId":@"xxx"}];
 
 接口返回数组中元素对象 **dic** 包含字段说明:
 
-> *jumpJudge字段   填入一级界面名称需要和策划商量，不能填二级三级界面名称或者某个单独按钮点击后的界面
->  jumpPath字段  空字符串代表点击图片没反应不跳转任何界面*
+> *jumpJudge字段  =0时，填入一级界面名称需要和策划商量，不能填二级三级界面名称或者某个单独按钮点击后的界面*
+>  *jumpPath字段  空字符串代表点击图片没反应不跳转任何界面*
 
 | 返回参数        | 类型  |必要参数 | 说明                        				|
 | :----          | :---: | :-: | :-----------------								 |
-| faceDrawingId | 字符串 | 是  | 脸图id          						 					| 
+| faceDrawingId | 字符串 | 是  | 脸图id          						 					|
 | order         | 字符串 | 是  | 脸图顺序                      				|
-| path          | 字符串 | 是  | 图片链接（需要展示在界面上的图片）				| 
-| jumpJudge     | 字符串 | 是  | 跳转判断 0=游戏界面 跳转判断 0=游戏界面			| 
+| path          | 字符串 | 是  | 图片链接（需要展示在界面上的图片）				|
+| jumpJudge     | 字符串 | 是  | 跳转判断 0=游戏界面 1=网址	|
 | jumpPath      | 字符串 | 是  | 图片链接（需要展示在界面上的图片）					|
-| startTime     | 字符串 | 否  | 开始时间					| 
-| endTime       | 字符串 | 否  | 结束时间					| 
-| levelUpLimit  | 字符串 | 否  | 等级上限					| 
-| levelDownLimit| 字符串 | 否  | 等级下限					| 
-| chargeUpLimit | 字符串 | 否  | 充值额度上限			 | 
-| chargeDownLimit| 字符串| 否  | 充值额度下限			 | 
-| platformId    | 字符串 | 否  | 平台 0=iOS  1=安卓		| 
-| serverId      | 字符串 | 否  | 区服Id 如:20001			  | 
+| startTime     | 字符串 | 否  | 开始时间					|
+| endTime       | 字符串 | 否  | 结束时间					|
+| levelUpLimit  | 字符串 | 否  | 等级上限					|
+| levelDownLimit| 字符串 | 否  | 等级下限					|
+| chargeUpLimit | 字符串 | 否  | 充值额度上限			 |
+| chargeDownLimit| 字符串| 否  | 充值额度下限			 |
+| platformId    | 字符串 | 否  | 平台 0=iOS  1=安卓		|
+| serverId      | 字符串 | 否  | 区服Id 如:20001			  |
 
 
 ```objectivec
