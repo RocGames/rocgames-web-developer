@@ -14,6 +14,12 @@
       * [运营综合检查项](started/operation/check-items.md)
       * [运营组工作节点](started/operation/work-node.md)
       * [运营工作概览](started/operation/operation.md)
+      * 投放SOP
+        * [投放SOP一（主流程部分）](started/operation/market-currency-sop.md)
+        * [投放SOP二（FB部分）](started/operation/market-FB-sop.md)
+        * [投放SOP三（GAD部分）](started/operation/market-GAD-sop.md)
+        * [投放SOP四（NCPI部分）](started/operation/market-NCPI-sop.md)
+        * [投放SOP五（LINE部分）](started/operation/market-LINE-sop.md)
 * [隐私政策](started/agreement.md)
 * [隐私权限语言国际化对照表](started/access-privacy-table.md)
 
@@ -71,6 +77,7 @@
 * 礼包系统
     * [功能介绍](modules/gift/overview.md)
     * 功能接入
+      * [API](modules/gift/switch-api.md)
     * [最佳实践](modules/gift/best-practice.md)
 * 数据分析
     * [功能介绍](modules/analytics/overview.md)
@@ -82,10 +89,14 @@
 * [即时通信](modules/other/4.md)
 * [推送通知](modules/other/5.md)
 * [数据存储](modules/other/6.md)
+* SDK功能接口
+    * 功能接入
+        * [API](modules/platform/firebase-api.md)
 
 ### 常见问题
 
 * [接入问题](faq/faq.md)
+	* [Android](faq/faq-and.md)
 * [使用问题](faq/faq-ios.md)
 * [广告相关问题](faq/faq-and.md)
 

@@ -76,8 +76,8 @@ sdkLogincallBack中会得到登录验证时所需要的参数
  ---|----|----
 gameSign|	string|	登录成功后，得到的加密字符串
 loginTime|	string|	用户登录的时间
-uid	|String|	用户的uid
-subId|	String| Yeeha平台子账号subId（⚠️请用该ID和游戏数据做关联对应） 
+uid	|String| 用户的uid（⚠️请用该ID和游戏数据做关联对应） 
+subId|	String| Yeeha平台子账号subId 
 mainId|	String	|Yeeha平台id（可能为空）
 token|	string|	主平台token
 username|	String|	用户名
