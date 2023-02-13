@@ -256,6 +256,7 @@ BOOL isShowAct = [ROCSdkManager isShowAct:@{@"serverId":@"xxx"}];
 接口返回数组中元素对象 **dic** 包含字段说明:
 
 > *jumpJudge字段  =0时，填入一级界面名称需要和策划商量，不能填二级三级界面名称或者某个单独按钮点击后的界面*
+> 
 >  *jumpPath字段  空字符串代表点击图片没反应不跳转任何界面*
 
 | 返回参数        | 类型  |必要参数 | 说明                        				|
@@ -264,7 +265,7 @@ BOOL isShowAct = [ROCSdkManager isShowAct:@{@"serverId":@"xxx"}];
 | order         | 字符串 | 是  | 脸图顺序                      				|
 | path          | 字符串 | 是  | 图片链接（需要展示在界面上的图片）				|
 | jumpJudge     | 字符串 | 是  | 跳转判断 0=游戏界面 1=网址	|
-| jumpPath      | 字符串 | 是  | 图片链接（需要展示在界面上的图片）					|
+| jumpPath      | 字符串 | 是  | 跳转路径 （可为空字符串）				|
 | startTime     | 字符串 | 否  | 开始时间					|
 | endTime       | 字符串 | 否  | 结束时间					|
 | levelUpLimit  | 字符串 | 否  | 等级上限					|
