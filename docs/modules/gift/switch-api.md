@@ -26,16 +26,16 @@
 ### 2.1 请求地址
 | key | <div style="width:350px">value</div> | 说明   |
 |-----|--------------------------------------|------|
-| URL |                                      | 测试环境 |
+| URL | http://m-uat.roc.games/api           | 测试环境 |
 | URL |                                      | 生成环境 |
 
 ### 2.2 接口响应说明
 #### 2.2.1 成功
 ```json
 {
-    "status":true,
-    "code":200,
-    "msg":"SUCCESS",
+    "success": true,
+    "errCode": 0,
+    "errMsg": "SUCCESS",
     "data":[
         {
         	# 更多参数请查阅相关接口
@@ -46,9 +46,10 @@
 #### 2.2.2 失败
 ```json
 {
-    "status":false,
-    "code":"-110110",
-    "msg":"ERROR",
+    "success": false,
+    "data": {},
+    "errCode": "-100001",
+    "errMsg": "Validation errors"
 }
 ```
 
@@ -65,22 +66,21 @@
 
 | key | value  | 说明   |
 |-----------|-------------|------|
-| signKey |  4b275ac216d7d8385206c9766485db6f  | 测试环境 |
-| signKey |    | 生成环境 |
+| signKey |    |  签名 signKey |
 
 #### 2.3.3  加密方式
 - 待签名数据
 ```json
     {
-        "roleId":"角色ID",
-        "roleServer":"游戏区服",
+        "role_id":"角色ID",
+        "role_server":"游戏区服",
         "prop":[
                     {
                       "name":"道具名称",
                       "num":"1"
                     }
                 ],
-      "orderId":"订单ID",
+      "order_id":"订单ID",
       "channel":"渠道",
       "extra":"扩展信息",
       "sign":"签名"
@@ -88,62 +88,86 @@
 ```
 
 - 拼装成待验签的字符串如下
-> $string = 'channel=渠道&orderId=订单ID&extra=扩展信息&prop=[{"name":"道具名称","num":"1"}]&roleId=角色ID&roleServer=游戏区服&sign=签名&key=4b275ac216d7d8385206c9766485db6f';
+> $string = 'channel=渠道&exOrderId=订单ID&extra=扩展信息&prop=[{"name":"道具名称","num":"1"}]&roleId=角色ID&roleServer=游戏区服&key=4b275ac216d7d8385206c9766485db6f';
 - md5签名
 > $sign = md5($string);
 
 
-## 三、客户端SDK-兑换礼包
+## 三、使用礼包码
 ### 3.1 请求地址
-> URL：
+> URL：/gift/codeUse
 
 ### 3.2 请求参数
 
-| name       | type     | required   | 说明     |
-|------------|----------| ---- |--------|
-| gameNo     | int      | 是   | 游戏id   |
-| exCode     | string   | 是   | 兑换码    |
-| roleId     | int      | 是   | 角色ID   |
-| roleServer | int      | 是   | 角色区服ID |
-| roleNick   | string   | 是   | 角色昵称   |
-| roleGrade  | int      | 是   | 角色等级   |
+| 字段         | 类型      | 必填   | 说明     | 签名  |
+|------------|---------|------|--------|-----|
+| gameNo     | int     | 是    | 游戏编号   | Y   |
+| exCode     | string  | 是    | 礼包码    | Y   |
+| roleId     | int     | 是    | 角色ID   | Y   |
+| roleServer | int     | 是    | 角色区服ID | Y   |
+| roleGrade  | int     | 是    | 角色等级   | Y   |
+| sign       | string  | 是    | 签名     | N   |
 
 ### 3.3 请求示例
 ```json
     {
-      "gameNo":"游戏编号",
-      "exCode":"兑换码",
+      "gameNo":"1015",
+      "exCode":"CXPIYFLW",
       "roleId":"角色ID",
       "roleServer":"兑换区服ID",
-      "roleNick":"角色昵称",
       "roleGrade":"角色等级",
+      "sign":"4297f44b13955235245b2497399d7a93"
+    }
+```
+
+## 四、查询礼包码
+### 4.1 请求地址
+> URL：/gift/codeQuery
+
+### 4.2 请求参数
+
+| 字段     | 类型    | 必填  | 说明                   | 签名  |
+|---------|--------|------|---------------------------|-----|
+| gameNo  | int    | 是   | 游戏编号                    | Y   |
+| exCodeMulti  | string | 是   | 礼包码，多个码使用【,】分割，数量 <= 10 | Y   |
+| sign    | string | 是   | 签名                      | N   |   
+
+### 3.3 请求示例
+```json
+    {
+      "gameNo":"1015",
+      "exCodeMulti":"CXPIYFLW,MO2F66U2",
+      "sign":"4297f44b13955235245b2497399d7a93"
     }
 ```
 
 
-## 四、游戏端-兑换礼包
+## 五、礼包发货
 
-### 4.1 请求地址
-> URL：游戏提供兑换礼包接口
+### 5.1 请求地址
+> URL：游戏提供道具发货接口
 
-### 4.2 请求参数
-| uid        | int    | required | 用户ID   |
-|------------|--------|----------|--------|
-| roleId     | int    | 是        | 角色ID   |
-| roleServer | int    | 是        | 角色区服ID   |
-| prop       |        | 是        | 礼包   |
-| prop.name  | string | 是        | 道具名称   |
-| prop.num   | int    | 是        | 数量     |
-| exOrderNo  | string | 是        | 兑换订单编号 |
-| channel    | string | 是        | 渠道   |
-| extra      | string | 是        | 扩展信息   |
-| sign       | string | 是        | 签名    |
+### 5.2 请求参数
+| 字段     | 类型    | 必填 | 说明         | 签名  |
+|---------|--------|---|------------|-----|
+| gameNo     | int    | 是 | 游戏编号       | Y   |
+| roleId     | int    | 是 | 角色ID       | Y   |
+| roleServer | int    | 是 | 角色区服ID     | Y   |
+| prop       |        | 是 | 礼包         | Y   |
+| prop.name  | string | 是 | 道具名称       | Y   |
+| prop.num   | int    | 是 | 数量         | Y   |
+| exOrderNo  | string | 是 | 兑换订单编号     | Y   |
+| exCode     | string | 是 | 礼包码        | Y   |
+| channel    | string | 是 | 渠道：rocgame | Y   |
+| extra      | string | 否 | 扩展信息       | Y   |
+| sign       | string | 是 | 签名         | N   |
 
-### 4.3 请求示例
+### 5.3 请求示例
 ```json
     {
+      "gameNo":"1015",
       "roleId":"角色ID",
-      "roleServer":"游戏区服",
+      "roleServer":"角色区服ID",
       "prop":[
         {
           "name":"道具名称",
@@ -154,8 +178,9 @@
           "num":"1"
         }
       ],
-      "exOrderId":"订单ID",
-      "channel":"渠道",
+      "exOrderId":"兑换订单编号",
+      "exCode":"礼包码",
+      "channel":"rocgame",
       "extra":"扩展信息",
       "sign":"签名"
 }
