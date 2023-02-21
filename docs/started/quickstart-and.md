@@ -88,7 +88,7 @@ apply plugin: 'com.google.firebase.crashlytics'
 <img src="../images/Android_3.png" width = "500" height = "150" alt="Android_3" align=center />
 
 ```gradle
-implementation 'com.myLegend.secondsdk:mySecondSdkaar:2.5.4'
+implementation 'com.myLegend.secondsdk:mySecondSdkaar:2.5.7'
 
 ```
 

@@ -55,7 +55,7 @@
     * [功能介绍](core/daq/overview.md)
     * 功能接入
         * [API](core/daq/access-api.md)
-        * [日志文件](core/daq/access-log.md)
+        * [日志文档](core/daq/access-log.md)
         * 埋点上报
             * [Android](core/daq/access-event-and.md)
             * [IOS](core/daq/access-event-ios.md)
