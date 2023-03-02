@@ -1,11 +1,10 @@
+<center><font size="64px">礼包兑换服务API接口</font></center>
+
 <style>
     table{
         margin: initial;
     }
 </style>
-<center><font size="64px">礼包兑换API接口</font></center>
-
-
 
 ## 一、文档说明
 
@@ -36,11 +35,7 @@
     "success": true,
     "errCode": 0,
     "errMsg": "SUCCESS",
-    "data":[
-        {
-        	# 更多参数请查阅相关接口
-        }
-    ]
+    "data":{}
 }
 ```
 #### 2.2.2 失败
@@ -101,7 +96,7 @@
 
 | 字段         | 类型      | 必填   | 说明     | 签名  |
 |------------|---------|------|--------|-----|
-| gameNo     | int     | 是    | 游戏编号   | Y   |
+| gameId     | int     | 是    | 游戏编号   | Y   |
 | exCode     | string  | 是    | 礼包码    | Y   |
 | roleId     | int     | 是    | 角色ID   | Y   |
 | roleServer | int     | 是    | 角色区服ID | Y   |
@@ -111,7 +106,7 @@
 ### 3.3 请求示例
 ```json
     {
-      "gameNo":"1015",
+      "gameId":"1015",
       "exCode":"CXPIYFLW",
       "roleId":"角色ID",
       "roleServer":"兑换区服ID",
@@ -128,14 +123,14 @@
 
 | 字段     | 类型    | 必填  | 说明                   | 签名  |
 |---------|--------|------|---------------------------|-----|
-| gameNo  | int    | 是   | 游戏编号                    | Y   |
+| gameId  | int    | 是   | 游戏编号                    | Y   |
 | exCodeMulti  | string | 是   | 礼包码，多个码使用【,】分割，数量 <= 10 | Y   |
 | sign    | string | 是   | 签名                      | N   |   
 
 ### 3.3 请求示例
 ```json
     {
-      "gameNo":"1015",
+      "gameId":"1015",
       "exCodeMulti":"CXPIYFLW,MO2F66U2",
       "sign":"4297f44b13955235245b2497399d7a93"
     }
@@ -150,7 +145,7 @@
 ### 5.2 请求参数
 | 字段     | 类型    | 必填 | 说明         | 签名  |
 |---------|--------|---|------------|-----|
-| gameNo     | int    | 是 | 游戏编号       | Y   |
+| gameId     | int    | 是 | 游戏编号       | Y   |
 | roleId     | int    | 是 | 角色ID       | Y   |
 | roleServer | int    | 是 | 角色区服ID     | Y   |
 | prop       |        | 是 | 礼包         | Y   |
@@ -165,7 +160,7 @@
 ### 5.3 请求示例
 ```json
     {
-      "gameNo":"1015",
+      "gameId":"1015",
       "roleId":"角色ID",
       "roleServer":"角色区服ID",
       "prop":[

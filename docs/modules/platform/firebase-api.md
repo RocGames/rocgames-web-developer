@@ -1,5 +1,9 @@
 <center><font size="64px">SDK功能API接口</font></center>
-
+<style>
+    table{
+        margin: initial;
+    }
+</style>
 
 
 ## 一、文档说明
@@ -27,23 +31,19 @@
 #### 2.2.1 成功
 ```json
 {
-    "success": true,
-    "errCode": 0,
-    "errMsg": "SUCCESS",
-    "data":[
-        {
-        	# 更多参数请查阅相关接口
-        }
-    ]
+  "success": true,
+  "errCode": 0,
+  "errMsg": "SUCCESS",
+  "data":{}
 }
 ```
 #### 2.2.2 失败
 ```json
 {
-    "success": false,
-    "data": {},
-    "errCode": "-100001",
-    "errMsg": "Validation errors"
+  "success": false,
+  "data": {},
+  "errCode": "-100001",
+  "errMsg": "Validation errors"
 }
 ```
 
@@ -66,22 +66,44 @@
 
 ### 3.3 请求参数
 
-| 字段              | 类型     | 必填  | 说明                       | 
-|-----------------|--------|-----|--------------------------|
-| gameNo          | int    | 是   | 游戏编号                     |
-| language        | int    | 是   | 英文en_US 繁体zh_HK 泰文th_TH  |
-| faceList        |        | 是   | 脸图数组                     |
-| - faceDrawingId | string | 是   | 脸图ID                     |
-| - order           | string | 是   | 脸图顺序                     |
-| - path            | string | 是   | 图片链接（需要展示在界面上的图片）        |
-| - jumpJudge       | string | 是   | 跳转判断 0=游戏界面 跳转判断 0=游戏界面  |
-| - jumpPath        | string | 是   | 图片链接（需要展示在界面上的图片）        |
-| - startTime       | string | 否   | 开始时间                     |
-| - endTime         | string | 否   | 结束时间                     |
-| - levelUpLimit    | string | 否   | 等级上限                     |
-| - levelDownLimit  | string | 否   | 等级下限                     |
-| - chargeUpLimit   | string | 否   | 充值额度上限                   |
-| - chargeDownLimit | string | 否   | 充值额度下限                   |
-| - platformId      | string | 否   | 平台 0=iOS  1=安卓           |
-| - serverId        | string | 否   | 区服Id 如:20001             |
+| 字段                | 类型     | 必填  | 说明                      | 
+|-------------------|--------|-----|-------------------------|
+| gameId            | int    | 是   | 游戏编号                    |
+| language          | int    | 是   | 英文en_US 繁体zh_HK 泰文th_TH |
+| data         |        | 是   | 脸图数组                    |
+| - faceDrawingId   | string | 是   | 脸图ID                    |
+| - order           | string | 是   | 脸图顺序                    |
+| - path            | string | 是   | 图片链接（需要展示在界面上的图片）       |
+| - jumpJudge       | string | 是   | 跳转判断 0=游戏界面 1=网址        |
+| - jumpPath        | string | 是   | 图片链接（需要展示在界面上的图片）       |
+| - startTime       | string | 否   | 开始时间戳                   |
+| - endTime         | string | 否   | 结束时间戳                   |
+| - levelUpLimit    | string | 否   | 等级上限                    |
+| - levelDownLimit  | string | 否   | 等级下限                    |
+| - chargeUpLimit   | string | 否   | 充值额度上限                  |
+| - chargeDownLimit | string | 否   | 充值额度下限                  |
+| - platformId      | string | 否   | 平台 0=IOS  1=安卓          |
+| - serverId        | string | 否   | 区服Id 如:20001            |
 
+
+
+## 四、悬浮窗配置
+
+### 4.1 请求地址
+> URL：/platform/syncLayer
+
+### 4.2 请求参数
+
+| 字段            | 类型      | 必填  | 说明                      | 
+|---------------|---------|-----|-------------------------|
+| gameId        | int     | 是   | 游戏编号                    |
+| language      | int     | 是   | 英文en_US 繁体zh_HK 泰文th_TH |
+| roleImgUrl    | string  | 是   | 角色素材地址                  |
+| bgImgUrl      | string  | 是   | 背景素材地址                  |
+| faq           |         | 是   |                         |
+| - imgUrl      | string  | 是   | faq素材地址                 |
+| - link        | string  | 是   | 跳转地址                    |
+| btn           |         | 是   |                         |
+| - title       | string  | 是   | 标题                      |
+| - imgUrl      | string  | 是   | 素材地址                    |
+| - link        | string  | 是   | 跳转地址                    |
