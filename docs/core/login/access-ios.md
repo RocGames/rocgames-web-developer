@@ -66,7 +66,6 @@ SDK支持多种登录方式
 | gameSign | 字符串 | 登录验证用 |
 | loginTime | 字符串 | 登录验证用 |
 | token | 字符串 | 登录验证用 |
-| channel | 字符串 | 支付时会用到  用户来源:如iOS、安卓等 |
 | loginWay | 字符串 | 登录方式  0:apple登录 1:游客登录 2:Fb登录 3:账号密码登录 |
 | fbBind | 字符串 | 0:未绑定  1:已绑定 |
 | twitterBind | 字符串 | 0:未绑定  1:已绑定 |
