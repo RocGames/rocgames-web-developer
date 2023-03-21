@@ -68,8 +68,27 @@
 # 2.测试工具及专项测试方法
 
 ##  网络测试
-  1. 所使用到的工具：Charles/Postman/Android Studio/WireShark等
+  1. 所使用到的工具：Charles/Postman/Android Studio/WireShark/Fiddle等
   2. 各个工具的具体方法和作用
+  
+ -   弱网测试：
+    
+      1.使用到的工具：Charles or wireShark 
+      
+      2.弱网测试的目的：模拟不同网络环境下游戏的表现
+      
+      3.弱网测试中，Charles的使用方法
+      
+         https://zhuanlan.zhihu.com/p/140942687
+ -   网络抓包：
+    
+      1.使用到的工具：Postman or WireShark/Charles
+      
+      2.抓包测试的目的：可用于接口测试，也可用于流量监控等
+      
+      3.Postman的使用方法
+        https://blog.csdn.net/weixin_67553250/article/details/128192765
+      
   
 ##  性能测试
   1.  所使用到的工具：Perdog
