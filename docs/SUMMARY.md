@@ -16,9 +16,12 @@
         * [IOS](core/daq/access-event-ios.md)
         * [埋点文档](core/daq/access-events-table.md)
       * [4. 数据库接入](core/daq/access-rds.md)
-* 验收流程
-    * [运维验收](started/publish.md)
-    * [测试验收](started/test.md)
+* 开服流程
+    * [运维验收](publish/publish-ops.md)
+    * [测试验收](publish/publish-qa.md)
+      * [探索测试](publish/qa/explore.md)
+      * [验收测试](publish/qa/check-test.md)
+      * [开服测试](publish/qa/service-test.md)
     * 运营验收
       * [运营综合检查项](started/operation/check-items.md)
       * [运营组工作节点](started/operation/work-node.md)
