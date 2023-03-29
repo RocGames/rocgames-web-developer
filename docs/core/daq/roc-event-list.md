@@ -534,26 +534,3 @@
 | roc_user_id | 10000039 | 用户身份唯一识别编码 |
 <!--endsec-->
 
-### `提现` roc_withdraw
-
-<button class="section" target="roc_withdraw" show="详情" hide="收起"></button>
-
-<!--sec data-title="roc_withdraw" data-id="roc_withdraw" data-show=false data-nopdf=true data-collapse=true ces-->
-#### 说明
-| Event nam | Purpose | Trigger |
-| --- | --- | --- |
-| roc_withdraw | 财务对账 | 当用户从其账户中提取资金时 |
-#### 参数
-| Parameter name | Example value | Description |
-| --- | --- | --- |
-| af_revenue | -100 | 提款的货币价值。记录为负收入值。 |
-| af_currency | AUD | 提取的货币 |
-| af_order_id | 6003847102 | 订单ID |
-| af_receipt_id | 927734 | 资金方关联的凭据ID |
-| roc_role_id | 10001 | 游戏内角色ID |
-| roc_region_id | 20003 | 游戏角色所在区服ID |
-| roc_pay_channel | MCard | 支付方式或渠道名称 |
-| roc_user_id | 10000039 | 用户身份唯一识别编码 |
-<!--endsec-->
-    
-    
