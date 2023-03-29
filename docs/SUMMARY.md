@@ -14,7 +14,8 @@
       * [3. 埋点接入](core/daq/access-event.md)
         * [Android](core/daq/access-event-and.md)
         * [IOS](core/daq/access-event-ios.md)
-        * [埋点文档](core/daq/access-events-table.md)
+        * [埋点文档](core/daq/roc-event-list.md)
+            * [埋点文档(旧)](core/daq/access-events-table.md)
       * [4. 数据库接入](core/daq/access-rds.md)
 * 开服流程
     * [运维验收](publish/publish-ops.md)
@@ -75,7 +76,7 @@
     * [最佳实践](modules/gift/best-practice.md)
 * 数据分析
     * [功能介绍](modules/analytics/overview.md)
-    * 功能接入
+    * [功能接入](modules/analytics/access.md)
     * [最佳实践](modules/analytics/best-practice.md)
 * 游戏活动
     * 功能接入

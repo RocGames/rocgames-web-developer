@@ -14,6 +14,8 @@
         "-search",
         "-sharing",
 
+        "sectionx",
+
         "ga",
         "code",
         "chapter-fold",
@@ -44,6 +46,9 @@
         "edit-link": {
             "base": "https://github.com/RocGames/developer-docs-portal/edit/main/docs",
             "label": "编辑本页"
+        },
+        "sectionx": {
+            "tag": "b"
         },
         "page-footer-ex":{
             "copyright": " Copyright © [ROC Games](http://roc.games) 2022 ",
