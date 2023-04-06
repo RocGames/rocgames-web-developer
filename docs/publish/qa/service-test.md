@@ -17,13 +17,6 @@
   12.然后将之前的新服的节点标签改为：hot   
   13.再进入游戏查看推荐服务器是否是新服，然后再用非白名单账号是否可以进入新服？（非白名单可以直接用游客）    
   14.确认都正常可以进入后在群内通知新服开放       
- - 相关链接   
-    服务器状态更改平台（MAPLE平台）：http://122.224.78.234:58006/sycamore/?region=iron&game=5  
-    程序GM平台：https://opww.oathofpeakww.com/admin?token=1c467aa6        
-    美服IOS账号：avzxoukswq@icloud.com  
-    美服谷歌账号：yha560868@gmail.com  
-    
-
 
 ## 开服测试CheckList
     工作说明：不同类型的项目研发根据实际的项目情况进行参照自查
