@@ -18,7 +18,7 @@
             * [埋点文档(旧)](core/daq/access-events-table.md)
       * [4. 数据库接入](core/daq/access-rds.md)
     * 工具集成
-      * [GM工具](started/quickstart-tools.md)
+      * [GM工具](gm/quickstart.md)
 * 开服流程
     * [运维验收](publish/publish-ops.md)
     * [测试验收](publish/publish-qa.md)
